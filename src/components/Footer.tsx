@@ -32,24 +32,14 @@ const Footer = () => {
           </div>
 
           {/* Services Section */}
-          <div>
-            <h4 className="text-lg font-semibold text-foreground mb-4">Serviços</h4>
-            <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Corte Clássico</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Corte Premium</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Barba Completa</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Combo Completo</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Tratamentos Especiais</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Produtos Premium</a></li>
-            </ul>
-          </div>
+          
 
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold text-foreground mb-4">Links Rápidos</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li><a href="#home" className="hover:text-primary transition-colors">Início</a></li>
-              <li><a href="#services" className="hover:text-primary transition-colors">Serviços</a></li>
+              
               <li><a href="#gallery" className="hover:text-primary transition-colors">Galeria</a></li>
               <li><a href="#about" className="hover:text-primary transition-colors">Sobre Nós</a></li>
               <li><a href="#contact" className="hover:text-primary transition-colors">Contato</a></li>
