@@ -56,25 +56,7 @@ const Contact = () => {
             
 
             {/* Social Media */}
-            <Card className="bg-gradient-card border-border/50">
-              <CardHeader>
-                <CardTitle>Siga-nos nas Redes Sociais</CardTitle>
-                <p className="text-muted-foreground">
-                  Acompanhe nosso trabalho e receba dicas de estilo
-                </p>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {socialLinks.map((social, index) => <div key={index} className="flex items-center justify-between p-3 bg-secondary/20 rounded-lg hover:bg-secondary/30 transition-colors">
-                      <div className="flex items-center space-x-3">
-                        <social.icon className="w-5 h-5 text-primary" />
-                        <span className="font-medium">{social.label}</span>
-                      </div>
-                      <span className="text-muted-foreground">{social.handle}</span>
-                    </div>)}
-                </div>
-              </CardContent>
-            </Card>
+            
 
             {/* Map Placeholder */}
             <Card className="bg-gradient-card border-border/50">

@@ -66,7 +66,7 @@ const Footer = () => {
                 <div>
                   <p>Rua Alferes Schmidt 78</p>
                   <p>Comasa - Joinville, SC</p>
-                  <p>CEP: 89228-300</p>
+                  
                 </div>
               </div>
               
@@ -79,8 +79,8 @@ const Footer = () => {
               </div>
 
               <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-primary" />
-                <p>contato@barbeariapremium.com</p>
+                
+                
               </div>
 
               <div className="flex items-start space-x-2">
