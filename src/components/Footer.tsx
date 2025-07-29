@@ -64,7 +64,7 @@ const Footer = () => {
               <div className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-primary mt-1" />
                 <div>
-                  <p>Rua Alfesres Schmidt 78</p>
+                  <p>Rua Alferes Schmidt 78</p>
                   <p>Comasa - Joinville, SC</p>
                   <p>CEP: 89228-300</p>
                 </div>
