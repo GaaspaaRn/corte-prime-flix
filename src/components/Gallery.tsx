@@ -145,7 +145,14 @@ const Gallery = () => {
                 ${index === 0 ? 'h-96 md:h-full' : 'h-64'}
               `}>
                 {/* Service Image */}
-                {item.image ? <img src={item.image} alt={item.title} className="w-full h-full object-cover" /> : <div className="text-center">
+                {item.image ? <img 
+                  src={item.image} 
+                  alt={`${item.title} - Barbearia Premium Joinville`} 
+                  className="w-full h-full object-cover" 
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                /> : <div className="text-center">
                     {item.type === "video" ? <Play className="w-12 h-12 text-primary mb-4 mx-auto" /> : <ImageIcon className="w-12 h-12 text-primary mb-4 mx-auto" />}
                     <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
                     <p className="text-sm text-muted-foreground mt-2">{item.description}</p>
@@ -200,7 +207,14 @@ const Gallery = () => {
                 <div className="space-y-6">
                   {/* Service Image */}
                   <div className="relative h-64 bg-muted/20 rounded-lg flex items-center justify-center overflow-hidden">
-                    {selectedService.image ? <img src={selectedService.image} alt={selectedService.title} className="w-full h-full object-cover" /> : selectedService.type === "video" ? <Play className="w-16 h-16 text-primary" /> : <ImageIcon className="w-16 h-16 text-primary" />}
+                    {selectedService.image ? <img 
+                      src={selectedService.image} 
+                      alt={`${selectedService.title} - Barbearia Premium Joinville`} 
+                      className="w-full h-full object-cover" 
+                      loading="lazy"
+                      width="400"
+                      height="256"
+                    /> : selectedService.type === "video" ? <Play className="w-16 h-16 text-primary" /> : <ImageIcon className="w-16 h-16 text-primary" />}
                   </div>
 
                   {/* Service Info */}
