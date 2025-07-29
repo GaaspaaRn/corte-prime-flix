@@ -145,29 +145,19 @@ const Gallery = () => {
                 ${index === 0 ? 'h-96 md:h-full' : 'h-64'}
               `}>
                 {/* Service Image */}
-                {item.image ? (
-                  <img 
-                    src={item.image} 
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="text-center">
+                {item.image ? <img src={item.image} alt={item.title} className="w-full h-full object-cover" /> : <div className="text-center">
                     {item.type === "video" ? <Play className="w-12 h-12 text-primary mb-4 mx-auto" /> : <ImageIcon className="w-12 h-12 text-primary mb-4 mx-auto" />}
                     <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
                     <p className="text-sm text-muted-foreground mt-2">{item.description}</p>
-                  </div>
-                )}
+                  </div>}
                 
                 {/* Title overlay for images */}
-                {item.image && (
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                {item.image && <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
                     <div className="absolute bottom-4 left-4 right-4">
                       <h3 className="text-lg font-semibold text-white">{item.title}</h3>
                       <p className="text-sm text-white/80 mt-1">{item.description}</p>
                     </div>
-                  </div>
-                )}
+                  </div>}
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -192,11 +182,7 @@ const Gallery = () => {
           <p className="text-muted-foreground mb-4">
             Gostou do que viu? Venha fazer parte da nossa galeria!
           </p>
-          <Button 
-            size="lg" 
-            className="shadow-glow"
-            onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}
-          >
+          <Button size="lg" className="shadow-glow" onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}>
             Agendar Meu Horário
           </Button>
         </div>
@@ -214,15 +200,7 @@ const Gallery = () => {
                 <div className="space-y-6">
                   {/* Service Image */}
                   <div className="relative h-64 bg-muted/20 rounded-lg flex items-center justify-center overflow-hidden">
-                    {selectedService.image ? (
-                      <img 
-                        src={selectedService.image} 
-                        alt={selectedService.title}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      selectedService.type === "video" ? <Play className="w-16 h-16 text-primary" /> : <ImageIcon className="w-16 h-16 text-primary" />
-                    )}
+                    {selectedService.image ? <img src={selectedService.image} alt={selectedService.title} className="w-full h-full object-cover" /> : selectedService.type === "video" ? <Play className="w-16 h-16 text-primary" /> : <ImageIcon className="w-16 h-16 text-primary" />}
                   </div>
 
                   {/* Service Info */}
@@ -231,9 +209,7 @@ const Gallery = () => {
                         {selectedService.match && <span className="text-primary font-semibold">
                             {selectedService.match} match
                           </span>}
-                        <h3 className="text-xl font-bold text-primary">
-                          {selectedService.price}
-                        </h3>
+                        
                       </div>
                       <div className="flex items-center text-muted-foreground">
                         <Clock className="w-4 h-4 mr-1" />
@@ -248,21 +224,14 @@ const Gallery = () => {
 
                   {/* Features */}
                   {selectedService.features && <div className="space-y-2">
-                      <h4 className="font-semibold text-foreground">Incluso:</h4>
+                      
                       <div className="grid grid-cols-2 gap-2">
-                        {selectedService.features.map((feature, idx) => <div key={idx} className="flex items-center text-sm text-muted-foreground">
-                            <Star className="w-3 h-3 text-primary mr-2 fill-current" />
-                            {feature}
-                          </div>)}
+                        {selectedService.features.map((feature, idx) => {})}
                       </div>
                     </div>}
 
                   {/* Action Button */}
-                  <Button 
-                    size="lg" 
-                    className="w-full shadow-glow" 
-                    onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}
-                  >
+                  <Button size="lg" className="w-full shadow-glow" onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}>
                     <Calendar className="w-5 h-5 mr-2" />
                     Agendar
                   </Button>
