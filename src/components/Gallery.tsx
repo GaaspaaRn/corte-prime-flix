@@ -30,6 +30,7 @@ const Gallery = () => {
       price: "R$ 45",
       duration: "45 min",
       match: "99%",
+      image: "/images/gallery/cortes/corte-classico.webp",
       details: "Corte tradicional com técnicas modernas, ideal para o dia a dia profissional. Inclui lavagem, corte personalizado e finalização com produtos premium.",
       features: ["Lavagem premium", "Corte personalizado", "Finalização", "Styling"]
     }, {
@@ -40,6 +41,7 @@ const Gallery = () => {
       price: "R$ 60",
       duration: "50 min",
       match: "97%",
+      image: "/images/gallery/cortes/corte-moderno.webp",
       details: "Corte moderno com técnicas atuais, perfeito para quem busca um visual diferenciado e estiloso.",
       features: ["Consulta de estilo", "Lavagem premium", "Corte moderno", "Finalização especial"]
     }, {
@@ -50,6 +52,7 @@ const Gallery = () => {
       price: "R$ 120",
       duration: "90 min",
       match: "95%",
+      image: "/images/gallery/cortes/corte-vip.webp",
       details: "Experiência exclusiva com atendimento personalizado, bebida inclusa e os melhores produtos. Barbearia Premium Joinville - Comasa.",
       features: ["Atendimento VIP", "Bebida inclusa", "Produtos premium", "Massagem relaxante", "Styling completo"]
     }],
@@ -61,6 +64,7 @@ const Gallery = () => {
       price: "R$ 35",
       duration: "30 min",
       match: "98%",
+      image: "/images/gallery/barbas/barba-completa.webp",
       details: "Serviço completo de barba com modelagem personalizada, aparar e hidratação.",
       features: ["Limpeza", "Modelagem", "Aparar", "Hidratação"]
     }, {
@@ -71,6 +75,7 @@ const Gallery = () => {
       price: "R$ 45",
       duration: "40 min",
       match: "96%",
+      image: "/images/gallery/barbas/degrade-barba.webp",
       details: "Técnica especializada de degradê na barba para um visual moderno e sofisticado.",
       features: ["Técnica avançada", "Degradê profissional", "Finalização premium"]
     }],
@@ -79,12 +84,14 @@ const Gallery = () => {
       type: "image",
       title: "Salão Principal",
       description: "Ambiente sofisticado",
+      image: "/images/gallery/ambiente/salao-principal.webp",
       details: "Conheça nosso ambiente premium com equipamentos de última geração."
     }, {
       id: 12,
       type: "image",
       title: "Área de Espera",
       description: "Conforto premium",
+      image: "/images/gallery/ambiente/area-espera.webp",
       details: "Área de espera confortável para você relaxar antes do seu atendimento."
     }],
     equipe: [{
@@ -92,12 +99,14 @@ const Gallery = () => {
       type: "image",
       title: "Barbeiro Master",
       description: "15 anos de experiência",
+      image: "/images/gallery/equipe/barbeiro-master.webp",
       details: "Nosso barbeiro master com mais de 15 anos de experiência em cortes masculinos."
     }, {
       id: 15,
       type: "image",
       title: "Equipe Completa",
       description: "Profissionais qualificados",
+      image: "/images/gallery/equipe/equipe-completa.webp",
       details: "Equipe completa de profissionais qualificados e em constante atualização."
     }]
   };
@@ -135,12 +144,30 @@ const Gallery = () => {
                 relative bg-muted/20 flex items-center justify-center
                 ${index === 0 ? 'h-96 md:h-full' : 'h-64'}
               `}>
-                {/* Placeholder for images */}
-                <div className="text-center">
-                  {item.type === "video" ? <Play className="w-12 h-12 text-primary mb-4 mx-auto" /> : <ImageIcon className="w-12 h-12 text-primary mb-4 mx-auto" />}
-                  <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground mt-2">{item.description}</p>
-                </div>
+                {/* Service Image */}
+                {item.image ? (
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="text-center">
+                    {item.type === "video" ? <Play className="w-12 h-12 text-primary mb-4 mx-auto" /> : <ImageIcon className="w-12 h-12 text-primary mb-4 mx-auto" />}
+                    <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground mt-2">{item.description}</p>
+                  </div>
+                )}
+                
+                {/* Title overlay for images */}
+                {item.image && (
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                      <p className="text-sm text-white/80 mt-1">{item.description}</p>
+                    </div>
+                  </div>
+                )}
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -182,8 +209,16 @@ const Gallery = () => {
                 
                 <div className="space-y-6">
                   {/* Service Image */}
-                  <div className="relative h-64 bg-muted/20 rounded-lg flex items-center justify-center">
-                    {selectedService.type === "video" ? <Play className="w-16 h-16 text-primary" /> : <ImageIcon className="w-16 h-16 text-primary" />}
+                  <div className="relative h-64 bg-muted/20 rounded-lg flex items-center justify-center overflow-hidden">
+                    {selectedService.image ? (
+                      <img 
+                        src={selectedService.image} 
+                        alt={selectedService.title}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      selectedService.type === "video" ? <Play className="w-16 h-16 text-primary" /> : <ImageIcon className="w-16 h-16 text-primary" />
+                    )}
                   </div>
 
                   {/* Service Info */}
