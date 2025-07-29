@@ -20,9 +20,7 @@ const Header = () => {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-foreground hover:text-primary transition-colors">
-              Início
-            </a>
+            
             
             <a href="#gallery" className="text-foreground hover:text-primary transition-colors">Serviços</a>
             <a href="#about" className="text-foreground hover:text-primary transition-colors">
@@ -46,11 +44,7 @@ const Header = () => {
           </div>
 
           {/* CTA Button */}
-          <Button 
-            variant="default" 
-            className="hidden md:flex shadow-glow"
-            onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}
-          >
+          <Button variant="default" className="hidden md:flex shadow-glow" onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}>
             Agendar Horário
           </Button>
         </div>
