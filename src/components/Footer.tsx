@@ -1,8 +1,6 @@
 import { Scissors, MapPin, Phone, Mail, Clock, Instagram, Facebook, MessageCircle } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-gradient-to-t from-secondary/20 to-background border-t border-border/50">
+  return <footer className="bg-gradient-to-t from-secondary/20 to-background border-t border-border/50">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
@@ -19,10 +17,7 @@ const Footer = () => {
                 <span className="text-xs text-muted-foreground tracking-widest">PREMIUM</span>
               </div>
             </div>
-            <p className="text-muted-foreground">
-              Há mais de 15 anos oferecendo o melhor em cuidados masculinos, 
-              combinando tradição e modernidade em cada atendimento.
-            </p>
+            <p className="text-muted-foreground">Sempre oferecendo o melhor em cuidados masculinos, combinando tradição e modernidade em cada atendimento.</p>
             <div className="flex space-x-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="w-5 h-5" />
@@ -69,17 +64,17 @@ const Footer = () => {
               <div className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-primary mt-1" />
                 <div>
-                  <p>Rua das Palmeiras, 123</p>
-                  <p>Centro - São Paulo, SP</p>
-                  <p>CEP: 01234-567</p>
+                  <p>Rua Alfesres Schmidt 78</p>
+                  <p>Comasa - Joinville, SC</p>
+                  <p>CEP: 89228-300</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-primary" />
                 <div>
-                  <p>(11) 99999-9999</p>
-                  <p>(11) 3333-4444</p>
+                  <p>(47) 98898-4877</p>
+                  
                 </div>
               </div>
 
@@ -91,9 +86,9 @@ const Footer = () => {
               <div className="flex items-start space-x-2">
                 <Clock className="w-4 h-4 text-primary mt-1" />
                 <div>
-                  <p>Segunda a Sexta: 08:00 - 20:00</p>
-                  <p>Sábado: 08:00 - 18:00</p>
-                  <p>Domingo: 09:00 - 15:00</p>
+                  <p>Segunda: 14:00 - 20:00</p>
+                  <p>Terça a Sexta: 09:00 - 20:00</p>
+                  <p>Sábado: 08:00 - 16:00</p>
                 </div>
               </div>
             </div>
@@ -104,7 +99,7 @@ const Footer = () => {
         <div className="border-t border-border/50 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left text-muted-foreground">
-              <p>&copy; 2024 Barbearia Premium. Todos os direitos reservados.</p>
+              <p>© 2025 Barbearia Premium. Todos os direitos reservados.</p>
             </div>
             
             <div className="flex items-center space-x-4 text-sm text-muted-foreground">
@@ -118,14 +113,10 @@ const Footer = () => {
 
           {/* Recognition */}
           <div className="text-center mt-8 text-muted-foreground">
-            <p className="text-sm">
-              🏆 Eleita a melhor barbearia de São Paulo em 2023 | ⭐ 4.9/5 no Google
-            </p>
+            <p className="text-sm">🏆 A Melhor Barbearia de Joinville | ⭐ 5/5 no Google</p>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

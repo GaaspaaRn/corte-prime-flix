@@ -1,83 +1,58 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Award, Users, Clock, Heart, Star, Trophy } from "lucide-react";
-
 const About = () => {
-  const stats = [
-    { icon: Users, label: "Clientes Satisfeitos", value: "5000+" },
-    { icon: Clock, label: "Anos de Experiência", value: "15+" },
-    { icon: Award, label: "Prêmios Recebidos", value: "8" },
-    { icon: Star, label: "Avaliação Média", value: "4.9" }
-  ];
-
-  const values = [
-    {
-      icon: Heart,
-      title: "Paixão pelo Ofício",
-      description: "Cada corte é uma obra de arte, feita com dedicação e amor pelo que fazemos."
-    },
-    {
-      icon: Star,
-      title: "Excelência Premium",
-      description: "Utilizamos apenas produtos de primeira linha e técnicas mais modernas do mercado."
-    },
-    {
-      icon: Trophy,
-      title: "Tradição e Inovação",
-      description: "Combinamos técnicas clássicas de barbeiros com as mais modernas tendências."
-    }
-  ];
-
-  return (
-    <section id="about" className="py-20 bg-gradient-to-b from-background to-secondary/20">
+  const stats = [{
+    icon: Users,
+    label: "Clientes Satisfeitos",
+    value: "5000+"
+  }, {
+    icon: Clock,
+    label: "Anos de Experiência",
+    value: "15+"
+  }, {
+    icon: Award,
+    label: "Prêmios Recebidos",
+    value: "8"
+  }, {
+    icon: Star,
+    label: "Avaliação Média",
+    value: "4.9"
+  }];
+  const values = [{
+    icon: Heart,
+    title: "Paixão pelo Ofício",
+    description: "Cada corte é uma obra de arte, feita com dedicação e amor pelo que fazemos."
+  }, {
+    icon: Star,
+    title: "Excelência Premium",
+    description: "Utilizamos apenas produtos de primeira linha e técnicas mais modernas do mercado."
+  }, {
+    icon: Trophy,
+    title: "Tradição e Inovação",
+    description: "Combinamos técnicas clássicas de barbeiros com as mais modernas tendências."
+  }];
+  return <section id="about" className="py-20 bg-gradient-to-b from-background to-secondary/20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Sobre a <span className="text-primary">Barbearia Premium</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Há mais de 15 anos oferecendo o melhor em cuidados masculinos, combinando tradição, qualidade e inovação em cada atendimento.
-          </p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Sempre oferecendo o melhor em cuidados masculinos, combinando tradição, qualidade e inovação em cada atendimento.</p>
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {stats.map((stat, index) => (
-            <Card key={index} className="text-center bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <stat.icon className="w-6 h-6 text-primary" />
-                  </div>
-                </div>
-                <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        
 
         {/* Story Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h3 className="text-3xl font-bold mb-6">Nossa História</h3>
             <div className="space-y-4 text-muted-foreground">
-              <p>
-                A Barbearia Premium nasceu do sonho de criar um espaço onde o cuidado masculino 
-                fosse tratado como arte. Desde 2008, nos dedicamos a oferecer não apenas cortes 
-                de cabelo, mas uma experiência completa de bem-estar e estilo.
-              </p>
-              <p>
-                Nosso fundador, com mais de 20 anos de experiência, reuniu uma equipe de 
-                profissionais apaixonados que compartilham da mesma visão: cada cliente 
-                merece se sentir especial e confiante.
-              </p>
-              <p>
-                Hoje, somos reconhecidos como referência em São Paulo, atendendo desde 
-                executivos até artistas, sempre mantendo o mesmo padrão de excelência 
-                que nos trouxe até aqui.
-              </p>
+              <p>A Barbearia Premium nasceu do sonho de criar um espaço onde o cuidado masculino fosse tratado como arte. Nos dedicamos a oferecer não apenas cortes de cabelo, mas uma experiência completa de bem-estar e estilo.</p>
+              <p>Nosso fundador, com  anos de experiência, reuniu uma equipe de profissionais apaixonados que compartilham da mesma visão: cada cliente merece se sentir especial e confiante.</p>
+              <p>Hoje, somos referência na Zona Leste de Joinville, atendendo desde executivos até artistas, sempre mantendo o mesmo padrão de excelência que nos trouxe até aqui.</p>
             </div>
             <Button size="lg" className="mt-6 shadow-glow">
               Conheça Nossa Equipe
@@ -106,8 +81,7 @@ const About = () => {
         <div>
           <h3 className="text-3xl font-bold text-center mb-12">Nossos Valores</h3>
           <div className="grid md:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="text-center bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300 hover:scale-105">
+            {values.map((value, index) => <Card key={index} className="text-center bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300 hover:scale-105">
                 <CardContent className="p-8">
                   <div className="flex justify-center mb-6">
                     <div className="p-4 bg-primary/10 rounded-lg">
@@ -117,8 +91,7 @@ const About = () => {
                   <h4 className="text-xl font-semibold mb-4">{value.title}</h4>
                   <p className="text-muted-foreground">{value.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
 
@@ -138,8 +111,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
