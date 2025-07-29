@@ -40,7 +40,7 @@ const Footer = () => {
             <ul className="space-y-2 text-muted-foreground">
               <li><a href="#home" className="hover:text-primary transition-colors">Início</a></li>
               
-              <li><a href="#gallery" className="hover:text-primary transition-colors">Galeria</a></li>
+              <li><a href="#gallery" className="hover:text-primary transition-colors">Serviços</a></li>
               <li><a href="#about" className="hover:text-primary transition-colors">Sobre Nós</a></li>
               <li><a href="#contact" className="hover:text-primary transition-colors">Contato</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Política de Privacidade</a></li>
