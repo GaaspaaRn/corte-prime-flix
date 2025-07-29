@@ -53,23 +53,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-6">
             {/* Contact Cards */}
-            <div className="grid gap-6">
-              {contactInfo.map((item, index) => <Card key={index} className="bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="p-3 bg-primary/10 rounded-lg">
-                        <item.icon className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                        <p className="text-muted-foreground whitespace-pre-line">
-                          {item.info}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>)}
-            </div>
+            
 
             {/* Social Media */}
             <Card className="bg-gradient-card border-border/50">
@@ -94,7 +78,7 @@ const Contact = () => {
 
             {/* Map Placeholder */}
             <Card className="bg-gradient-card border-border/50">
-              <CardContent className="p-6">
+              <CardContent className="p-6 mx-0">
                 <div className="aspect-video bg-muted/20 rounded-lg flex items-center justify-center">
                   <div className="text-center">
                     <MapPin className="w-12 h-12 text-primary mb-4 mx-auto" />
