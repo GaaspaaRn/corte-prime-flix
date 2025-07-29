@@ -103,7 +103,11 @@ const About = () => {
             Venha conhecer nosso espaço e descobrir por que somos a escolha de milhares de clientes satisfeitos.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="shadow-glow">
+            <Button 
+              size="lg" 
+              className="shadow-glow"
+              onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}
+            >
               Agendar Visita
             </Button>
             <Button variant="outline" size="lg" className="border-primary/30 hover:border-primary">

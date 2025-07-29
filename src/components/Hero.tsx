@@ -11,7 +11,7 @@ const Hero = () => {
           loading="eager"
         />
         {/* Netflix-style overlay covering entire hero */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
       
       {/* Decorative Elements */}
@@ -50,7 +50,11 @@ const Hero = () => {
           <div className="flex justify-center animate-fade-in-up" style={{
           animationDelay: '0.6s'
         }}>
-            <Button size="lg" className="px-8 py-6 text-lg shadow-glow">
+            <Button 
+              size="lg" 
+              className="px-8 py-6 text-lg shadow-glow"
+              onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}
+            >
               <Calendar className="w-5 h-5 mr-2" />
               Agendar Agora
             </Button>

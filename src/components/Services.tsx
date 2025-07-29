@@ -102,6 +102,7 @@ const Services = () => {
                 <Button 
                   className={`w-full ${service.featured ? 'shadow-glow' : ''}`}
                   variant={service.featured ? 'default' : 'outline'}
+                  onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}
                 >
                   Agendar Serviço
                 </Button>

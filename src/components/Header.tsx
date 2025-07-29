@@ -46,7 +46,11 @@ const Header = () => {
           </div>
 
           {/* CTA Button */}
-          <Button variant="default" className="hidden md:flex shadow-glow">
+          <Button 
+            variant="default" 
+            className="hidden md:flex shadow-glow"
+            onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}
+          >
             Agendar Horário
           </Button>
         </div>

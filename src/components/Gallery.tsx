@@ -192,7 +192,11 @@ const Gallery = () => {
           <p className="text-muted-foreground mb-4">
             Gostou do que viu? Venha fazer parte da nossa galeria!
           </p>
-          <Button size="lg" className="shadow-glow">
+          <Button 
+            size="lg" 
+            className="shadow-glow"
+            onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}
+          >
             Agendar Meu Horário
           </Button>
         </div>
@@ -254,7 +258,11 @@ const Gallery = () => {
                     </div>}
 
                   {/* Action Button */}
-                  <Button size="lg" className="w-full shadow-glow" onClick={() => setSelectedService(null)}>
+                  <Button 
+                    size="lg" 
+                    className="w-full shadow-glow" 
+                    onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}
+                  >
                     <Calendar className="w-5 h-5 mr-2" />
                     Agendar
                   </Button>
