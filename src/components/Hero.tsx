@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Play, Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -34,15 +34,10 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <div className="flex justify-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <Button size="lg" className="px-8 py-6 text-lg shadow-glow">
               <Calendar className="w-5 h-5 mr-2" />
               Agendar Agora
-            </Button>
-            
-            <Button variant="outline" size="lg" className="px-8 py-6 text-lg border-primary/30 hover:border-primary">
-              <Play className="w-5 h-5 mr-2" />
-              Assistir Vídeo
             </Button>
           </div>
 

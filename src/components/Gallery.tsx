@@ -51,17 +51,6 @@ const Gallery = () => {
         details: "Experiência exclusiva com atendimento personalizado, bebida inclusa e os melhores produtos. Barbearia Premium Joinville - Comasa.",
         features: ["Atendimento VIP", "Bebida inclusa", "Produtos premium", "Massagem relaxante", "Styling completo"]
       },
-      { 
-        id: 4, 
-        type: "video", 
-        title: "Processo de Corte", 
-        description: "Vídeo demonstrativo",
-        price: "Gratuito",
-        duration: "3 min",
-        match: "100%",
-        details: "Assista como nossos profissionais executam os cortes com precisão e técnica.",
-        features: ["Demonstração técnica", "Passo a passo", "Dicas profissionais"]
-      }
     ],
     barbas: [
       { 
