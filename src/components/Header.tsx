@@ -7,7 +7,12 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="relative">
-              <Scissors className="w-8 h-8 text-primary animate-float" />
+              <img 
+                src="/images/logo/logo-principal.webp" 
+                alt="Barbearia Premium Logo" 
+                className="w-10 h-10 object-contain"
+                loading="eager"
+              />
               <div className="absolute -inset-1 bg-gradient-accent rounded-full opacity-20 blur-sm"></div>
             </div>
             <div className="flex flex-col">

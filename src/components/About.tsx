@@ -59,15 +59,16 @@ const About = () => {
             </Button>
           </div>
 
-          {/* Placeholder for founder/team image */}
+          {/* Nossa História - Imagem */}
           <div className="relative">
             <Card className="bg-gradient-card border-border/50 overflow-hidden">
-              <div className="aspect-square bg-muted/20 flex items-center justify-center">
-                <div className="text-center">
-                  <Users className="w-16 h-16 text-primary mb-4 mx-auto" />
-                  <h4 className="text-xl font-semibold text-foreground">Nossa Equipe</h4>
-                  <p className="text-muted-foreground mt-2">Profissionais especializados</p>
-                </div>
+              <div className="aspect-square">
+                <img 
+                  src="/images/about/nossa-historia.webp" 
+                  alt="Nossa História - Barbearia Premium" 
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
             </Card>
             

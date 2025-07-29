@@ -2,8 +2,16 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin } from "lucide-react";
 const Hero = () => {
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-hero"></div>
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="/images/hero/background-hero.webp" 
+          alt="Barbearia Premium" 
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-hero/80"></div>
+      </div>
       
       {/* Decorative Elements */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-float"></div>
