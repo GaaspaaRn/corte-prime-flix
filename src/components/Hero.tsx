@@ -10,7 +10,8 @@ const Hero = () => {
           className="w-full h-full object-cover"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-hero/80"></div>
+        {/* Netflix-style overlay covering entire hero */}
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
       
       {/* Decorative Elements */}
@@ -21,10 +22,7 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        {/* Netflix-style overlay */}
-        <div className="absolute inset-0 -mx-4 bg-black/40 backdrop-blur-sm rounded-3xl"></div>
-        
-        <div className="relative z-20 max-w-4xl mx-auto py-16">
+        <div className="max-w-4xl mx-auto">
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
             <span className="text-foreground">BARBEARIA</span>
@@ -64,8 +62,8 @@ const Hero = () => {
         }}>
             <MapPin className="w-5 h-5 mr-2 text-primary" />
             <span>Joinville, SC - Zona Leste</span>
+          </div>
         </div>
-      </div>
       </div>
 
       {/* Bottom Fade */}
