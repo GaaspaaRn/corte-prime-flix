@@ -54,7 +54,20 @@ const About = () => {
               <p>Nosso fundador, com  anos de experiência, reuniu uma equipe de profissionais apaixonados que compartilham da mesma visão: cada cliente merece se sentir especial e confiante.</p>
               <p>Hoje, somos <strong>referência em Joinville</strong>, especialmente na região do Comasa, atendendo desde executivos até artistas, sempre mantendo o mesmo padrão de excelência que nos trouxe até aqui. Nossa barbearia é reconhecida como uma das melhores de Santa Catarina.</p>
             </div>
-            <Button size="lg" className="mt-6 shadow-glow">
+            <Button 
+              size="lg" 
+              className="mt-6 shadow-glow"
+              onClick={() => {
+                const gallerySection = document.getElementById('gallery');
+                const equipeButton = document.querySelector('[data-category="equipe"]') as HTMLButtonElement;
+                if (gallerySection) {
+                  gallerySection.scrollIntoView({ behavior: 'smooth' });
+                  setTimeout(() => {
+                    equipeButton?.click();
+                  }, 500);
+                }
+              }}
+            >
               Conheça Nossa Equipe
             </Button>
           </div>

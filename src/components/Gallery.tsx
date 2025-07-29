@@ -124,10 +124,16 @@ const Gallery = () => {
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4">
-            {categories.map(category => <Button key={category.id} variant={activeCategory === category.id ? "default" : "outline"} onClick={() => setActiveCategory(category.id)} className={`
+            {categories.map(category => <Button 
+                key={category.id} 
+                data-category={category.id}
+                variant={activeCategory === category.id ? "default" : "outline"} 
+                onClick={() => setActiveCategory(category.id)} 
+                className={`
                   px-6 py-2 transition-all duration-300
                   ${activeCategory === category.id ? 'shadow-glow' : 'border-primary/30 hover:border-primary'}
-                `}>
+                `}
+              >
                 {category.label}
               </Button>)}
           </div>
