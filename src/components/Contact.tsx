@@ -37,14 +37,7 @@ const Contact = () => {
   return <section id="contact" className="py-20 bg-secondary/10">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Entre em <span className="text-primary">Contato</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Estamos aqui para atender você da melhor forma. Agende seu horário ou tire suas dúvidas.
-          </p>
-        </div>
+        
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
