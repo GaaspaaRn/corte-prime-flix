@@ -100,20 +100,18 @@ const Contact = () => {
             {/* Map Placeholder */}
             <Card className="bg-gradient-card border-border/50">
               <CardContent className="p-6 mx-0">
-                <div className="aspect-video bg-muted/20 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-primary mb-4 mx-auto" />
-                    <h3 className="text-lg font-semibold text-foreground">Nossa Localização</h3>
-                    <p className="text-muted-foreground mt-2">Rua Alferes Schimidt, 78 - Comasa</p>
-                    <p className="text-muted-foreground">Joinville, SC</p>
-                    <Button 
-                      variant="outline" 
-                      className="mt-4 border-primary/30 hover:border-primary"
-                      onClick={() => window.open('https://maps.google.com/?q=Rua+Alferes+Schimidt,+78,+Comasa,+Joinville,+SC', '_blank')}
-                    >
-                      Ver no Google Maps
-                    </Button>
-                  </div>
+                <div className="aspect-video bg-muted/20 rounded-lg flex items-center justify-center overflow-hidden">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.655208435702!2d-48.807446924582415!3d-26.27285147703436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb1004ce77c39%3A0x3d4b5a580455a09!2sBarbearia%20Premium!5e0!3m2!1spt-BR!2sbr!4v1753813720749!5m2!1spt-BR!2sbr" 
+                    width="100%" 
+                    height="100%" 
+                    style={{border:0}} 
+                    allowFullScreen={true} 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Localização da Barbearia Premium - Rua Alferes Schimidt 78, Comasa, Joinville"
+                    className="rounded-lg"
+                  />
                 </div>
               </CardContent>
             </Card>

@@ -110,7 +110,9 @@ const About = () => {
             >
               Agendar Visita
             </Button>
-            <Button variant="outline" size="lg" className="border-primary/30 hover:border-primary">
+            <Button variant="outline" size="lg" className="border-primary/30 hover:border-primary"
+              onClick={() => window.open('https://maps.app.goo.gl/JpT9MR6PvDcPCzJa7', '_blank')}
+            >
               Ver Localização
             </Button>
           </div>
