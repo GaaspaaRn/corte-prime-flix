@@ -4,17 +4,12 @@ import { Scissors, Menu, Phone, Clock } from "lucide-react";
 import { useState } from "react";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+  return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="relative">
-              <Scissors className="w-8 h-8 text-primary animate-float" />
-              <div className="absolute -inset-1 bg-gradient-accent rounded-full opacity-20 blur-sm"></div>
-            </div>
+            
             <div className="flex flex-col">
               <h1 className="text-xl font-bold text-primary tracking-wide">
                 BARBEARIA
@@ -31,11 +26,7 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA Button */}
-          <Button 
-            variant="default" 
-            className="hidden md:flex shadow-glow" 
-            onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}
-          >
+          <Button variant="default" className="hidden md:flex shadow-glow" onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}>
             Agendar Horário
           </Button>
 
@@ -48,36 +39,20 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-80">
               <div className="flex flex-col space-y-6 mt-6">
-                <a 
-                  href="#gallery" 
-                  className="text-lg text-foreground hover:text-primary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
+                <a href="#gallery" className="text-lg text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
                   Serviços
                 </a>
-                <a 
-                  href="#about" 
-                  className="text-lg text-foreground hover:text-primary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
+                <a href="#about" className="text-lg text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
                   Sobre
                 </a>
-                <a 
-                  href="#contact" 
-                  className="text-lg text-foreground hover:text-primary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
+                <a href="#contact" className="text-lg text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
                   Contato
                 </a>
                 <div className="pt-4 border-t border-border">
-                  <Button 
-                    variant="default" 
-                    className="w-full shadow-glow" 
-                    onClick={() => {
-                      window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank');
-                      setIsOpen(false);
-                    }}
-                  >
+                  <Button variant="default" className="w-full shadow-glow" onClick={() => {
+                  window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank');
+                  setIsOpen(false);
+                }}>
                     Agendar Horário
                   </Button>
                 </div>
@@ -96,7 +71,6 @@ const Header = () => {
           </Sheet>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
 export default Header;

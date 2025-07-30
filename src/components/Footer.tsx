@@ -6,10 +6,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="relative">
-                <Scissors className="w-8 h-8 text-primary" />
-                <div className="absolute -inset-1 bg-gradient-accent rounded-full opacity-20 blur-sm"></div>
-              </div>
+              
               <div className="flex flex-col">
                 <h3 className="text-xl font-bold text-primary tracking-wide">
                   BARBEARIA
