@@ -51,23 +51,21 @@ const About = () => {
             <h3 className="text-3xl font-bold mb-6">Nossa História</h3>
             <div className="space-y-4 text-muted-foreground">
               <p>A <strong>Barbearia Premium Joinville</strong> nasceu do sonho de criar um espaço onde o cuidado masculino fosse tratado como arte. Localizada na <strong>Rua Alferes Schimidt, 78, no Comasa</strong>, nos dedicamos a oferecer não apenas cortes de cabelo, mas uma experiência completa de bem-estar e estilo.</p>
-              <p>Nosso fundador, com  anos de experiência, reuniu uma equipe de profissionais apaixonados que compartilham da mesma visão: cada cliente merece se sentir especial e confiante.</p>
+              <p>Nosso fundador após anos de experiência, reuniu uma equipe de profissionais apaixonados que compartilham da mesma visão: cada cliente merece se sentir especial e confiante.</p>
               <p>Hoje, somos <strong>referência em Joinville</strong>, especialmente na região do Comasa, atendendo desde executivos até artistas, sempre mantendo o mesmo padrão de excelência que nos trouxe até aqui. Nossa barbearia é reconhecida como uma das melhores de Santa Catarina.</p>
             </div>
-            <Button 
-              size="lg" 
-              className="mt-6 shadow-glow"
-              onClick={() => {
-                const gallerySection = document.getElementById('gallery');
-                const equipeButton = document.querySelector('[data-category="equipe"]') as HTMLButtonElement;
-                if (gallerySection) {
-                  gallerySection.scrollIntoView({ behavior: 'smooth' });
-                  setTimeout(() => {
-                    equipeButton?.click();
-                  }, 500);
-                }
-              }}
-            >
+            <Button size="lg" className="mt-6 shadow-glow" onClick={() => {
+            const gallerySection = document.getElementById('gallery');
+            const equipeButton = document.querySelector('[data-category="equipe"]') as HTMLButtonElement;
+            if (gallerySection) {
+              gallerySection.scrollIntoView({
+                behavior: 'smooth'
+              });
+              setTimeout(() => {
+                equipeButton?.click();
+              }, 500);
+            }
+          }}>
               Conheça Nossa Equipe
             </Button>
           </div>
@@ -76,12 +74,7 @@ const About = () => {
           <div className="relative">
             <Card className="bg-gradient-card border-border/50 overflow-hidden">
               <div className="aspect-square">
-                <img 
-                  src="/images/about/nossa-historia.webp" 
-                  alt="Nossa História - Barbearia Premium" 
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+                <img src="/images/about/nossa-historia.webp" alt="Nossa História - Barbearia Premium" className="w-full h-full object-cover" loading="lazy" />
               </div>
             </Card>
             
@@ -119,30 +112,15 @@ const About = () => {
           {/* Mapa Integrado */}
           <div className="mb-8 flex justify-center">
             <div className="w-full max-w-4xl">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.655208435702!2d-48.807446924582415!3d-26.27285147703436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb1004ce77c39%3A0x3d4b5a580455a09!2sBarbearia%20Premium!5e0!3m2!1spt-BR!2sbr!4v1753813720749!5m2!1spt-BR!2sbr" 
-                width="100%" 
-                height="400" 
-                className="border-0 rounded-lg"
-                allowFullScreen={true}
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Localização da Barbearia Premium - Rua Alferes Schimidt 78, Comasa, Joinville SC"
-              />
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.655208435702!2d-48.807446924582415!3d-26.27285147703436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb1004ce77c39%3A0x3d4b5a580455a09!2sBarbearia%20Premium!5e0!3m2!1spt-BR!2sbr!4v1753813720749!5m2!1spt-BR!2sbr" width="100%" height="400" className="border-0 rounded-lg" allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Localização da Barbearia Premium - Rua Alferes Schimidt 78, Comasa, Joinville SC" />
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="shadow-glow"
-              onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}
-            >
+            <Button size="lg" className="shadow-glow" onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}>
               Agendar Visita
             </Button>
-            <Button variant="outline" size="lg" className="border-primary/30 hover:border-primary"
-              onClick={() => window.open('https://maps.app.goo.gl/JpT9MR6PvDcPCzJa7', '_blank')}
-            >
+            <Button variant="outline" size="lg" className="border-primary/30 hover:border-primary" onClick={() => window.open('https://maps.app.goo.gl/JpT9MR6PvDcPCzJa7', '_blank')}>
               Ver Localização
             </Button>
           </div>
