@@ -154,7 +154,7 @@ const Gallery = () => {
                 {item.image ? <img 
                   src={item.image} 
                   alt={`${item.title} - Barbearia Premium Joinville`} 
-                  className="w-full h-full object-cover" 
+                  className="w-full h-full object-cover object-center"
                   loading="lazy"
                   width="400"
                   height="300"
