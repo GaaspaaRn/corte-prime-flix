@@ -105,7 +105,7 @@ const About = () => {
         {/* Call to Action */}
         <div className="text-center mt-16 p-8 bg-gradient-card rounded-lg border border-border/50">
           <h3 className="text-2xl font-bold mb-4">Nossa Localização</h3>
-          <p className="text-muted-foreground mb-6">Venha conhecer nosso espaço e descobrir por que temos avaliação 5,0 ⭐⭐⭐⭐⭐ no google.</p>
+          <p className="text-muted-foreground mb-6">Venha conhecer nosso espaço e descobrir por que temos avaliação 5/5 ⭐⭐⭐⭐⭐ no google.</p>
           
           {/* Mapa Integrado */}
           <div className="mb-8 flex justify-center">
