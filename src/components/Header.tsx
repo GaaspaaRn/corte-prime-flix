@@ -10,7 +10,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/public/images/logo/logo-principal.png" 
+              src="/images/logo/logo-principal.png" 
               alt="Barbearia Premium" 
               className="h-12 w-auto"
             />
