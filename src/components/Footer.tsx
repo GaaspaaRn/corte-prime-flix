@@ -9,7 +9,7 @@ const Footer = () => {
               <img 
                 src="/public/images/logo/logo-principal.png" 
                 alt="Barbearia Premium" 
-                className="h-16 w-auto"
+                className="h-12 w-auto"
               />
             </div>
             <p className="text-muted-foreground">Sempre oferecendo o melhor em cuidados masculinos, combinando tradição e modernidade em cada atendimento.</p>
