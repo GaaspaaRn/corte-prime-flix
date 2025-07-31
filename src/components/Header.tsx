@@ -12,7 +12,7 @@ const Header = () => {
             <img 
               src="/public/images/logo/logo-principal.png" 
               alt="Barbearia Premium" 
-              className="h-48 w-auto"
+              className="h-32 w-auto"
             />
           </div>
 
