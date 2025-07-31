@@ -1,10 +1,10 @@
 import { Scissors, MapPin, Phone, Mail, Clock, Instagram, Facebook, MessageCircle } from "lucide-react";
 const Footer = () => {
   return <footer className="bg-gradient-to-t from-secondary/20 to-background border-t border-border/50">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-8">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
-          <div className="space-y-4">
+          <div className="space-y-2">
             <div className="flex items-center">
               <img 
                 src="/public/images/logo/logo-principal.png" 
