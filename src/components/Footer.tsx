@@ -5,14 +5,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              
-              <div className="flex flex-col">
-                <h3 className="text-xl font-bold text-primary tracking-wide">
-                  BARBEARIA
-                </h3>
-                <span className="text-xs text-muted-foreground tracking-widest">PREMIUM</span>
-              </div>
+            <div className="flex items-center">
+              <img 
+                src="/public/images/logo/logo-principal.png" 
+                alt="Barbearia Premium" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-muted-foreground">Sempre oferecendo o melhor em cuidados masculinos, combinando tradição e modernidade em cada atendimento.</p>
             <div className="flex space-x-4">

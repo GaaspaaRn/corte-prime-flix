@@ -8,14 +8,12 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            
-            <div className="flex flex-col">
-              <h1 className="text-xl font-bold text-primary tracking-wide">
-                BARBEARIA
-              </h1>
-              <span className="text-xs text-muted-foreground tracking-widest">PREMIUM</span>
-            </div>
+          <div className="flex items-center">
+            <img 
+              src="/public/images/logo/logo-principal.png" 
+              alt="Barbearia Premium" 
+              className="h-10 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
