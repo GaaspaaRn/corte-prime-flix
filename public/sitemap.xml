@@ -15,6 +15,16 @@
       <image:title>Barbearia Premium Joinville - Ambiente Principal</image:title>
       <image:caption>Interior da melhor barbearia de Joinville no Comasa</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://barbeariapremiumjoinville.com/android-chrome-512x512.png</image:loc>
+      <image:title>Logo Barbearia Premium Joinville</image:title>
+      <image:caption>Logo oficial da Barbearia Premium Joinville</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://barbeariapremiumjoinville.com/images/gallery/cortes/corte-classico.webp</image:loc>
+      <image:title>Corte Clássico Masculino</image:title>
+      <image:caption>Exemplo de corte clássico masculino da Barbearia Premium</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://barbeariapremiumjoinville.com/#services</loc>
