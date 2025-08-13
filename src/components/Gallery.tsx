@@ -100,7 +100,7 @@ const Gallery = () => {
       title: "Barbeiro Master",
       description: "15 anos de experiência",
       image: "/images/gallery/equipe/barbeiro-master.webp",
-      details: "Nosso barbeiro master com mais de 15 anos de experiência em cortes masculinos."
+      details: "Nosso barbeiro master com mais de 5 anos de experiência em cortes masculinos."
     }, {
       id: 15,
       type: "image",

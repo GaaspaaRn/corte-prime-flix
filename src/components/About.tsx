@@ -9,7 +9,7 @@ const About = () => {
   }, {
     icon: Clock,
     label: "Anos de Experiência",
-    value: "15+"
+    value: "5+"
   }, {
     icon: Award,
     label: "Prêmios Recebidos",
