@@ -7,7 +7,7 @@ const AssinaturaCTAFinal = () => {
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5547999999999?text=Olá! Quero assinar o plano premium da Barbearia Premium!', '_blank');
+    window.open('https://wa.me/5547988984877?text=Olá! Quero assinar o plano premium da Barbearia Premium!', '_blank');
   };
 
   return (

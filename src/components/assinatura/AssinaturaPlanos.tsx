@@ -16,8 +16,7 @@ const AssinaturaPlanos = () => {
         'Barba completa ilimitada',
         'Aparar e modelar',
         'Produtos premium inclusos',
-        'Atendimento personalizado',
-        'Agendamento prioritário'
+        'Atendimento personalizado'
       ],
       ctaText: 'Assinar Barba'
     },
@@ -32,8 +31,7 @@ const AssinaturaPlanos = () => {
         'Corte masculino ilimitado',
         'Lavagem e finalização',
         'Produtos premium inclusos',
-        'Análise capilar completa',
-        'Agendamento prioritário'
+        'Atendimento personalizado'
       ],
       ctaText: 'Assinar Cabelo'
     },
@@ -48,9 +46,7 @@ const AssinaturaPlanos = () => {
         'Cabelo + Barba ilimitados',
         'Todos os serviços inclusos',
         'Produtos premium inclusos',
-        'Atendimento VIP exclusivo',
-        'Agendamento super prioritário',
-        'Desconto em produtos para casa'
+        'Atendimento VIP exclusivo'
       ],
       ctaText: 'Assinar Completo'
     }
@@ -58,7 +54,7 @@ const AssinaturaPlanos = () => {
 
   const handlePlanoClick = (planoId: string) => {
     // Here you would integrate with your payment system
-    window.open('https://wa.me/5547999999999?text=Olá! Gostaria de assinar o plano ' + planoId, '_blank');
+    window.open('https://wa.me/5547988984877?text=Olá! Gostaria de assinar o plano ' + planoId, '_blank');
   };
 
   return (
