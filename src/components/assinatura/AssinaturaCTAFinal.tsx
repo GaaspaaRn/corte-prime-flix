@@ -1,17 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Crown, Clock, CheckCircle } from "lucide-react";
-
 const AssinaturaCTAFinal = () => {
   const handleCTAClick = () => {
-    document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('planos')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/5547988984877?text=Olá! Quero assinar o plano premium da Barbearia Premium!', '_blank');
   };
-
-  return (
-    <section className="py-20 px-4 bg-gradient-hero">
+  return <section className="py-20 px-4 bg-gradient-hero">
       <div className="max-w-4xl mx-auto text-center">
         
         {/* Main Headline */}
@@ -69,28 +67,17 @@ const AssinaturaCTAFinal = () => {
         {/* CTA Buttons */}
         <div className="mt-12 space-y-6 animate-fade-in-up">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              onClick={handleCTAClick}
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto rounded-xl shadow-glow hover:shadow-glow/80 transition-all duration-300 hover:scale-105"
-            >
+            <Button onClick={handleCTAClick} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto rounded-xl shadow-glow hover:shadow-glow/80 transition-all duration-300 hover:scale-105">
               <Crown className="mr-2 h-5 w-5" />
               ESCOLHER MEU PLANO AGORA
             </Button>
             
-            <Button 
-              onClick={handleWhatsAppClick}
-              variant="secondary"
-              size="lg" 
-              className="font-bold text-lg px-12 py-6 h-auto rounded-xl hover:border-primary/50 transition-all duration-300"
-            >
+            <Button onClick={handleWhatsAppClick} variant="secondary" size="lg" className="font-bold text-lg px-12 py-6 h-auto rounded-xl hover:border-primary/50 transition-all duration-300">
               FALAR NO WHATSAPP
             </Button>
           </div>
           
-          <p className="text-sm text-muted-foreground">
-            ✅ Sem fidelidade • ✅ Cancele quando quiser • ✅ Primeira semana grátis
-          </p>
+          <p className="text-sm text-muted-foreground">✅ Sem fidelidade • ✅ Cancele quando quiser </p>
         </div>
 
         {/* Final Message */}
@@ -103,17 +90,8 @@ const AssinaturaCTAFinal = () => {
         </div>
 
         {/* Countdown Timer Placeholder */}
-        <div className="mt-12 bg-destructive/10 border border-destructive/20 rounded-xl p-6 animate-fade-in-up">
-          <p className="text-destructive font-semibold text-lg">
-            🔥 PROMOÇÃO POR TEMPO LIMITADO
-          </p>
-          <p className="text-muted-foreground mt-2">
-            Primeiros 50 assinantes ganham <span className="text-primary font-semibold">primeira semana grátis</span> + desconto de 20% no primeiro mês
-          </p>
-        </div>
+        
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AssinaturaCTAFinal;

@@ -1,14 +1,13 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Crown, TrendingUp, Target, Clock } from "lucide-react";
-
 const AssinaturaAutoridade = () => {
   const handleCTAClick = () => {
-    document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('planos')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section className="py-20 px-4 bg-gradient-hero">
+  return <section className="py-20 px-4 bg-gradient-hero">
       <div className="max-w-6xl mx-auto">
         
         {/* Main Authority Card */}
@@ -56,26 +55,14 @@ const AssinaturaAutoridade = () => {
             </div>
 
             {/* Scarcity Message */}
-            <div className="bg-primary/10 border border-primary/20 rounded-xl p-6 space-y-4">
-              <p className="text-lg font-semibold text-primary">
-                ⚠️ VAGAS LIMITADAS POR REGIÃO
-              </p>
-              <p className="text-muted-foreground">
-                Para manter a qualidade do atendimento premium, limitamos o número de assinantes por região. 
-                <span className="text-primary font-semibold"> Restam poucas vagas disponíveis em Joinville.</span>
-              </p>
-            </div>
+            
 
             {/* Call to Action */}
             <div className="space-y-4">
               <p className="text-xl font-semibold text-foreground">
                 Faça o melhor investimento da sua carreira na sua imagem.
               </p>
-              <Button 
-                onClick={handleCTAClick}
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto rounded-xl shadow-glow hover:shadow-glow/80 transition-all duration-300 hover:scale-105"
-              >
+              <Button onClick={handleCTAClick} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto rounded-xl shadow-glow hover:shadow-glow/80 transition-all duration-300 hover:scale-105">
                 <Crown className="mr-2 h-5 w-5" />
                 GARANTIR MINHA VAGA AGORA
               </Button>
@@ -92,8 +79,6 @@ const AssinaturaAutoridade = () => {
           </blockquote>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AssinaturaAutoridade;
