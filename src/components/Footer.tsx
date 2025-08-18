@@ -33,10 +33,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-foreground mb-4">Links Rápidos</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#home" className="hover:text-primary transition-colors">Início</a></li>
+              <li><a href="https://barbeariapm.com/#home" className="hover:text-primary transition-colors">Início</a></li>
               
-              <li><a href="#gallery" className="hover:text-primary transition-colors">Serviços</a></li>
-              <li><a href="#about" className="hover:text-primary transition-colors">Sobre Nós</a></li>
+              <li><a href="https://barbeariapm.com/#gallery" className="hover:text-primary transition-colors">Serviços</a></li>
+              <li><a href="https://barbeariapm.com/#about" className="hover:text-primary transition-colors">Sobre Nós</a></li>
               
               <li><a href="#" className="hover:text-primary transition-colors">Política de Privacidade</a></li>
             </ul>
