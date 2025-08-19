@@ -82,11 +82,7 @@ const AssinaturaCTAFinal = () => {
 
         {/* Final Message */}
         <div className="mt-16 animate-fade-in-up">
-          <blockquote className="text-xl md:text-2xl font-medium text-muted-foreground italic">
-            "Deixe de contar com a sorte. 
-            <span className="text-primary font-semibold"> Garante sua melhor versão, todos os dias.</span>
-            Quer simplificar sua vida e elevar seu padrão?"
-          </blockquote>
+          
         </div>
 
         {/* Countdown Timer Placeholder */}
