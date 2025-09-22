@@ -36,9 +36,7 @@ const AssinaturaFAQ = () => {
             Tire todas as suas 
             <span className="bg-gradient-accent bg-clip-text text-transparent"> dúvidas</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Respondemos as principais perguntas sobre nossa assinatura premium
-          </p>
+          
         </div>
 
         {/* FAQ Accordion */}

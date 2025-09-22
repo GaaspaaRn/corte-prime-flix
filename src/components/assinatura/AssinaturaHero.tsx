@@ -66,9 +66,7 @@ const AssinaturaHero = () => {
           <div className="mt-12 flex flex-col items-center gap-4">
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map(i => (
-                  <div key={i} className="w-8 h-8 rounded-full bg-primary/20 border border-primary/30" />
-                ))}
+                {[1, 2, 3, 4].map(i => {})}
               </div>
               <span>Mais de 200+ clientes premium</span>
             </div>
