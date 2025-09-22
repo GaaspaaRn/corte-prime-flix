@@ -20,17 +20,8 @@ const AssinaturaFAQ = () => {
     question: "Posso pausar minha assinatura por férias ou viagem?",
     answer: "Sim! Você pode pausar sua assinatura por até 60 dias por ano, ideal para férias ou viagens longas. Basta avisar com antecedência."
   }, {
-    question: "E se eu não ficar satisfeito?",
-    answer: "Oferecemos garantia de satisfação de 30 dias. Se não ficar completamente satisfeito, devolvemos seu dinheiro sem questionamentos."
-  }, {
     question: "Os produtos utilizados são de qualidade premium?",
     answer: "Absolutamente! Trabalhamos apenas com produtos de marcas premium nacionais e importadas. Todos os produtos aplicados durante os serviços estão inclusos na assinatura."
-  }, {
-    question: "Como funciona o agendamento prioritário?",
-    answer: "Assinantes têm acesso a um sistema de agendamento exclusivo com horários reservados e podem remarcar com mais facilidade, mesmo em cima da hora."
-  }, {
-    question: "Posso transferir minha assinatura para outra pessoa?",
-    answer: "A assinatura é pessoal e intransferível, vinculada ao seu CPF. Isso garante que mantemos o controle de qualidade e o atendimento personalizado."
   }];
   return <section className="py-20 px-4 bg-background">
       <div className="max-w-4xl mx-auto">
