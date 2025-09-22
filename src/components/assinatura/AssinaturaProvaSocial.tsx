@@ -35,9 +35,7 @@ const AssinaturaProvaSocial = () => {
             <span className="bg-gradient-accent bg-clip-text text-transparent"> clientes premium </span>
             estão dizendo
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Mais de 200 homens já transformaram sua rotina com nossa assinatura ilimitada
-          </p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Mais de 100 homens já transformaram sua rotina com nossa assinatura ilimitada</p>
         </div>
 
         {/* Testimonials Grid */}

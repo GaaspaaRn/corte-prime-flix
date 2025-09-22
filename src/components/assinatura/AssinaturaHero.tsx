@@ -35,10 +35,7 @@ const AssinaturaHero = () => {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="animate-fade-in-up">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-8">
-            <Crown className="h-4 w-4 text-primary" />
-            <span className="text-primary font-medium text-sm">EXPERIÊNCIA PREMIUM SEM LIMITES</span>
-          </div>
+          
           
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
@@ -66,11 +63,9 @@ const AssinaturaHero = () => {
           <div className="mt-12 flex flex-col items-center gap-4">
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map(i => (
-                  <div key={i} className="w-8 h-8 rounded-full bg-primary/20 border-2 border-primary" />
-                ))}
+                {[1, 2, 3, 4].map(i => {})}
               </div>
-              <span>Mais de 200+ clientes premium</span>
+              <span>Mais de 100+ clientes premium</span>
             </div>
             <p className="text-xs text-muted-foreground">
               ⚠️ <span className="text-primary font-semibold">Vagas limitadas</span> - Restam poucas assinaturas disponíveis

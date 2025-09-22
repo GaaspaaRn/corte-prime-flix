@@ -59,9 +59,7 @@ const AssinaturaFAQ = () => {
             <h3 className="text-2xl font-bold text-foreground mb-4">
               Ainda tem alguma dúvida?
             </h3>
-            <p className="text-muted-foreground mb-6">
-              Nossa equipe está pronta para ajudar você a escolher o melhor plano
-            </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="https://wa.me/5547988984877?text=Olá,%20estou%20em%20dúvida%20sobre%20os%20planos" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg transition-colors">
                 Falar no WhatsApp
