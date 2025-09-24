@@ -3,27 +3,27 @@ import { Star, Quote } from "lucide-react";
 const AssinaturaProvaSocial = () => {
   const depoimentos = [{
     nome: "Roberto Silva",
-    texto: "Melhor decisão que tomei! Antes gastava mais de R$200 por mês indo em várias barbearias. Agora pago R$139 e tenho acesso ilimitado ao melhor serviço de Joinville.",
+    texto: "melhor plano de assinatura da região, antes gastava mais de R$250 por mês indo em barbearia 1 vez por semana. Agora pago R$139 e posso ir quando eu quiser.",
     rating: 5
   }, {
     nome: "Marcos Oliveira",
-    texto: "Trabalho com vendas e minha imagem é fundamental. Com a assinatura, nunca mais me preocupo em estar sempre impecável para reuniões importantes.",
+    texto: "Trabalho com vendas e minha imagem é fundamental, com a assinatura posso dar sempre aquela passada antes das reuniões.",
     rating: 5
   }, {
     nome: "Fernando Costa",
-    texto: "A praticidade é incrível. Tenho agenda corrida e aqui consigo encaixar um horário facilmente. O atendimento VIP faz toda diferença.",
+    texto: "a praticidade é foda, tenho agenda corrida e aqui consigo encaixar um horário de boa, o atendimento vip faz toda diferença.",
     rating: 5
   }, {
     nome: "Carlos Mendes",
-    texto: "No início pensei que era caro, mas fazendo as contas percebi que economizo muito. Além disso, a qualidade é incomparável.",
+    texto: "no início pensei que era balela, me surpreendi com o atendimento, aliás a qualidade do corte é incomparável.",
     rating: 5
   }, {
     nome: "João Santos",
-    texto: "Sou assinante há 6 meses e não consigo mais imaginar minha vida sem esse serviço. É liberdade total para cuidar da aparência.",
+    texto: "Sou assinante há 5 meses e posso dizer que se tem liberdade total para cuidar do visual.",
     rating: 5
   }, {
     nome: "Ricardo Almeida",
-    texto: "Recomendo para todos os meus colegas. O ambiente é top, os profissionais são excelentes e o custo-benefício é imbatível.",
+    texto: "Recomendo para todos os meus amigos. O ambiente é top, os profissionais são bons e o custo-benefício é imbatível.",
     rating: 5
   }];
   return <section className="py-20 px-4 bg-background">
