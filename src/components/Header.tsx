@@ -18,9 +18,9 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#gallery" className="text-foreground hover:text-primary transition-colors">Serviços</a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">Sobre</a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contato</a>
+            <a href="/#gallery" className="text-foreground hover:text-primary transition-colors">Serviços</a>
+            <a href="/#about" className="text-foreground hover:text-primary transition-colors">Sobre</a>
+            <a href="/#contact" className="text-foreground hover:text-primary transition-colors">Contato</a>
           </nav>
 
           {/* Desktop CTA Button */}
