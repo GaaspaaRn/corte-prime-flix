@@ -1,32 +1,28 @@
 import { Card } from "@/components/ui/card";
-import { Clock, Crown, Sparkles, Infinity, MapPin, Shield } from "lucide-react";
+import { Crown, Infinity, MapPin } from "lucide-react"; // Removidos os ícones que não são mais usados
+
 const AssinaturaBeneficios = () => {
-  const beneficios = [{
-    icon: Infinity,
-    title: "Acesso Ilimitado",
-    description: "Quantas vezes quiser no mês. Sem limites, sem pressa, sem preocupação."
-  }, {
-    icon: Crown,
-    title: "Experiência Premium",
-    description: "Ambiente luxuoso, produtos de alta qualidade e atendimento VIP."
-  }, {
-    icon: Clock,
-    title: "Máxima Praticidade",
-    description: "Reunião de última hora? Aquele convite inesperado? Você está sempre pronto."
-  }, {
-    icon: Sparkles,
-    title: "Exclusividade Total",
-    description: "Esse plano não é para todos. Foi pensado para quem valoriza a imagem."
-  }, {
-    icon: MapPin,
-    title: "Localização Prime",
-    description: "No coração do Comasa, fácil acesso e estacionamento disponível."
-  }, {
-    icon: Shield,
-    title: "Garantia Premium",
-    description: "Satisfação garantida ou seu dinheiro de volta em 30 dias."
-  }];
-  return <section className="py-20 px-4 bg-background">
+  // Array de benefícios atualizado, com os itens removidos
+  const beneficios = [
+    {
+      icon: Infinity,
+      title: "Acesso Ilimitado",
+      description: "Quantas vezes quiser no mês. Sem limites, sem pressa, sem preocupação."
+    }, 
+    {
+      icon: Crown,
+      title: "Experiência Premium",
+      description: "Ambiente luxuoso, produtos de alta qualidade e atendimento VIP."
+    }, 
+    {
+      icon: MapPin,
+      title: "Localização Prime",
+      description: "No coração do Comasa, fácil acesso e estacionamento disponível."
+    }
+  ];
+
+  return (
+    <section className="py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
@@ -34,14 +30,16 @@ const AssinaturaBeneficios = () => {
             Por que escolher a 
             <span className="bg-gradient-accent bg-clip-text text-transparent"> Assinatura Premium?</span>
           </h2>
-          
         </div>
 
         {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {beneficios.map((beneficio, index) => <Card key={index} className="p-8 bg-gradient-card border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-glow/20 animate-fade-in-up group" style={{
-          animationDelay: `${index * 0.1}s`
-        }}>
+          {beneficios.map((beneficio, index) => (
+            <Card 
+              key={index} 
+              className="p-8 bg-gradient-card border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-glow/20 animate-fade-in-up group" 
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               <div className="flex flex-col items-center text-center space-y-4">
                 <div className="p-4 rounded-2xl bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
                   <beneficio.icon className="h-8 w-8 text-primary" />
@@ -49,7 +47,8 @@ const AssinaturaBeneficios = () => {
                 <h3 className="text-xl font-bold text-foreground">{beneficio.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{beneficio.description}</p>
               </div>
-            </Card>)}
+            </Card>
+          ))}
         </div>
 
         {/* Call to Action Text */}
@@ -60,6 +59,8 @@ const AssinaturaBeneficios = () => {
           </p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default AssinaturaBeneficios;
