@@ -2,9 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Scissors, Menu, Phone, Clock } from "lucide-react";
 import { useState } from "react";
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 py-0">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -20,7 +23,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <a href="/#gallery" className="text-foreground hover:text-primary transition-colors">Serviços</a>
             <a href="/#about" className="text-foreground hover:text-primary transition-colors">Sobre</a>
-            <a href="/#contact" className="text-foreground hover:text-primary transition-colors">Contato</a>
+            {/* A linha do Contato foi removida daqui */}
           </nav>
 
           {/* Desktop CTA Button */}
@@ -43,9 +46,7 @@ const Header = () => {
                 <a href="/#about" className="text-lg text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
                   Sobre
                 </a>
-                <a href="/#contact" className="text-lg text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
-                  Contato
-                </a>
+                {/* A linha do Contato foi removida daqui também */}
                 <div className="pt-4 border-t border-border">
                   <Button variant="default" className="w-full shadow-glow" onClick={() => {
                   window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank');
@@ -69,6 +70,8 @@ const Header = () => {
           </Sheet>
         </div>
       </div>
-    </header>;
+    </header>
+  );
 };
+
 export default Header;
