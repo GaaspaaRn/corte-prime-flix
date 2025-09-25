@@ -37,13 +37,13 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-80">
               <div className="flex flex-col space-y-6 mt-6">
-                <a href="#gallery" className="text-lg text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
+                <a href="/#gallery" className="text-lg text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
                   Serviços
                 </a>
-                <a href="#about" className="text-lg text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
+                <a href="/#about" className="text-lg text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
                   Sobre
                 </a>
-                <a href="#contact" className="text-lg text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
+                <a href="/#contact" className="text-lg text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
                   Contato
                 </a>
                 <div className="pt-4 border-t border-border">
