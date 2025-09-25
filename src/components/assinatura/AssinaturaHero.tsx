@@ -10,7 +10,7 @@ const AssinaturaHero = () => {
   return <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{
-      backgroundImage: "url('/hero-assinatura.jpg')"
+      backgroundImage: "url('/hero-assinatura.webp')"
     }} />
       
       {/* Overlay */}
