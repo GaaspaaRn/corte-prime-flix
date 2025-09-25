@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Scissors, Menu, Phone, Clock } from "lucide-react";
+import { Menu, Phone, Clock } from "lucide-react";
 import { useState } from "react";
+import Link from 'next/link'; // Importe o componente Link
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,9 +22,10 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="/#gallery" className="text-foreground hover:text-primary transition-colors">Serviços</a>
-            <a href="/#about" className="text-foreground hover:text-primary transition-colors">Sobre</a>
-            {/* A linha do Contato foi removida daqui */}
+            <Link href="/#gallery" className="text-foreground hover:text-primary transition-colors">Serviços</Link>
+            <Link href="/#about" className="text-foreground hover:text-primary transition-colors">Sobre</Link>
+            {/* ALTERADO AQUI */}
+            <Link href="/assinatura" className="text-foreground hover:text-primary transition-colors">Assinatura</Link>
           </nav>
 
           {/* Desktop CTA Button */}
@@ -40,13 +42,16 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-80">
               <div className="flex flex-col space-y-6 mt-6">
-                <a href="/#gallery" className="text-lg text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
+                <Link href="/#gallery" className="text-lg text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
                   Serviços
-                </a>
-                <a href="/#about" className="text-lg text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
+                </Link>
+                <Link href="/#about" className="text-lg text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
                   Sobre
-                </a>
-                {/* A linha do Contato foi removida daqui também */}
+                </Link>
+                {/* ALTERADO AQUI */}
+                <Link href="/assinatura" className="text-lg text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
+                  Assinatura
+                </Link>
                 <div className="pt-4 border-t border-border">
                   <Button variant="default" className="w-full shadow-glow" onClick={() => {
                   window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank');
