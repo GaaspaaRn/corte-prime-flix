@@ -56,14 +56,16 @@ const AssinaturaHero = () => {
           {/* CTA Button */}
           <Button onClick={handleCTAClick} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto rounded-xl shadow-glow hover:shadow-glow/80 transition-all duration-300 hover:scale-105">
             <Crown className="mr-2 h-5 w-5" />
-            ASSINE AGORA
+            VER PLANOS
           </Button>
           
           {/* Social Proof */}
           <div className="mt-12 flex flex-col items-center gap-4">
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map(i => {})}
+                {[1, 2, 3, 4].map(i => (
+                  <div key={i} className="w-10 h-10 rounded-full bg-primary/20 border-2 border-background" />
+                ))}
               </div>
               <span>Mais de 100+ clientes premium</span>
             </div>

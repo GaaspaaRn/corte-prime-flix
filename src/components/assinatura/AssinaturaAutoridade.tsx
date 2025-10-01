@@ -7,6 +7,6 @@ const AssinaturaAutoridade = () => {
       behavior: 'smooth'
     });
   };
-  return;
+  return null;
 };
 export default AssinaturaAutoridade;
