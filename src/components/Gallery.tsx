@@ -244,9 +244,14 @@ const Gallery = () => {
 
                   {/* Features */}
                   {selectedService.features && <div className="space-y-2">
-                      
+                      <h4 className="font-semibold text-foreground">O que está incluído:</h4>
                       <div className="grid grid-cols-2 gap-2">
-                        {selectedService.features.map((feature, idx) => {})}
+                        {selectedService.features.map((feature, idx) => (
+                          <div key={idx} className="flex items-center text-sm text-muted-foreground">
+                            <Star className="w-3 h-3 text-primary mr-2 fill-current" />
+                            {feature}
+                          </div>
+                        ))}
                       </div>
                     </div>}
 
