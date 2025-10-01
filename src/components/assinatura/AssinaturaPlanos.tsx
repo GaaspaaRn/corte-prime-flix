@@ -43,9 +43,7 @@ const AssinaturaPlanos = () => {
             Escolha seu 
             <span className="bg-gradient-accent bg-clip-text text-transparent"> Plano Premium</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Planos ilimitados pensados para quem entende que a imagem não é custo, é investimento.
-          </p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Planos ilimitados pensados para quem entende que a imagem não é custo, é investimento. *PLANOS SEM FIDELIDADE*</p>
         </div>
 
         {/* Plans Grid */}
