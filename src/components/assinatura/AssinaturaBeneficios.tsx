@@ -54,8 +54,7 @@ const AssinaturaBeneficios = () => {
         {/* Call to Action Text */}
         <div className="mt-16 text-center animate-fade-in-up bg-gradient-card rounded-2xl p-8 border border-border/50">
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            <span className="text-primary font-semibold">Imagine nunca mais se preocupar com o visual.</span> Precisa estar impecável para uma reunião ou para um encontro ou até para uma viagem de última hora? É só vir. Aqui na Barbearia Premium, você paga uma vez e tem acesso ilimitado aos nossos serviços. 
-            <span className="text-primary font-semibold"> É liberdade, é praticidade, é experiência premium.</span>
+            Imagine nunca mais se preocupar com o visual. Você com a beleza alinhada todos os dias aqui na Barbearia Premium, você paga uma vez e tem acesso ilimitado aos serviços durante todo o mês. É liberdade, é praticidade, é experiência premium.
           </p>
         </div>
       </div>
