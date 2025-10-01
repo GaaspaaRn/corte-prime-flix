@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 const AssinaturaHero = lazy(() => import("@/components/assinatura/AssinaturaHero"));
 const AssinaturaBeneficios = lazy(() => import("@/components/assinatura/AssinaturaBeneficios"));
 const AssinaturaPlanos = lazy(() => import("@/components/assinatura/AssinaturaPlanos"));
+const Services = lazy(() => import("@/components/Services"));
 const AssinaturaProvaSocial = lazy(() => import("@/components/assinatura/AssinaturaProvaSocial"));
 const AssinaturaAutoridade = lazy(() => import("@/components/assinatura/AssinaturaAutoridade"));
 const AssinaturaFAQ = lazy(() => import("@/components/assinatura/AssinaturaFAQ"));
@@ -26,6 +27,7 @@ const Assinatura = () => {
       <Suspense fallback={<div className="h-20 bg-secondary/10 animate-pulse" />}>
         <AssinaturaBeneficios />
         <AssinaturaPlanos />
+        <Services />
         <AssinaturaProvaSocial />
         <AssinaturaAutoridade />
         <AssinaturaFAQ />
