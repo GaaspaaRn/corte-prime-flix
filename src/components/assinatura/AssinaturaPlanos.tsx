@@ -11,7 +11,7 @@ const AssinaturaPlanos = () => {
     icon: Sparkles,
     popular: false,
     features: ['Barba completa ilimitada', 'Aparar e modelar', 'Produtos premium inclusos', 'Atendimento personalizado'],
-    ctaText: 'Chamar no WhatsAPP'
+    ctaText: 'Ver detalhes do Plano'
   }, {
     id: 'cabelo',
     name: 'Premium Cabelo',
@@ -20,7 +20,7 @@ const AssinaturaPlanos = () => {
     icon: Scissors,
     popular: false,
     features: ['Corte masculino ilimitado', 'Lavagem e finalização', 'Produtos premium inclusos', 'Atendimento personalizado'],
-    ctaText: 'Chamar no WhatsAPP'
+    ctaText: 'Ver detalhes do Plano'
   }, {
     id: 'completo',
     name: 'Premium Completo',
@@ -29,7 +29,7 @@ const AssinaturaPlanos = () => {
     icon: Crown,
     popular: true,
     features: ['Cabelo + Barba ilimitados', 'Todos os serviços inclusos', 'Produtos premium inclusos', 'Atendimento VIP exclusivo'],
-    ctaText: 'Chamar no WhatsAPP'
+    ctaText: 'Ver detalhes do Plano'
   }];
   const handlePlanoClick = (planoId: string) => {
     // Here you would integrate with your payment system
