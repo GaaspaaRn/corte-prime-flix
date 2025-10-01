@@ -2,28 +2,28 @@ import { Card } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
 const AssinaturaProvaSocial = () => {
   const depoimentos = [{
-    nome: "Roberto Silva",
-    texto: "melhor plano de assinatura da região, antes gastava mais de R$250 por mês indo em barbearia 1 vez por semana. Agora pago R$139 e posso ir quando eu quiser.",
+    nome: "Airton Ferreira",
+    texto: "Muito profissionalismo. Parabéns pela qualidade do serviço e atenção ao cliente. Transmitem tradição acompanhada de modernidade.",
     rating: 5
   }, {
-    nome: "Marcos Oliveira",
-    texto: "Trabalho com vendas e minha imagem é fundamental, com a assinatura posso dar sempre aquela passada antes das reuniões.",
+    nome: "FR Multimarcas",
+    texto: "Ambiente 100%, melhor atendimento que ja presenciei, ja recomendei para todos os amigos, parabens",
     rating: 5
   }, {
-    nome: "Fernando Costa",
-    texto: "a praticidade é foda, tenho agenda corrida e aqui consigo encaixar um horário de boa, o atendimento vip faz toda diferença.",
+    nome: "Fabio Manske",
+    texto: "Atendimento, ambiente, corte tudo de excelente qualidade....recomendo demais",
     rating: 5
   }, {
-    nome: "Carlos Mendes",
-    texto: "no início pensei que era balela, me surpreendi com o atendimento, aliás a qualidade do corte é incomparável.",
+    nome: "Leandro Michalak Da Silva",
+    texto: "Ambiente e atendimento sensacional, profissional de qualidade e com muito talento, com certeza a melhor de Joinville região, Top demais",
     rating: 5
   }, {
-    nome: "João Santos",
-    texto: "Sou assinante há 5 meses e posso dizer que se tem liberdade total para cuidar do visual.",
+    nome: "Fernando Cracco",
+    texto: "Ambiente muito bom e aconchegante, profissional de qualidade e atencioso.",
     rating: 5
   }, {
-    nome: "Ricardo Almeida",
-    texto: "Recomendo para todos os meus amigos. O ambiente é top, os profissionais são bons e o custo-benefício é imbatível.",
+    nome: "Matheus Sapellini",
+    texto: "Experiência ótima, atendimento e qualidade nota 10! ambiente muito agradável e aconchegante!",
     rating: 5
   }];
   return <section className="py-20 px-4 bg-background">

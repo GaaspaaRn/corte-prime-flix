@@ -62,9 +62,6 @@ const AssinaturaHero = () => {
           {/* Social Proof */}
           <div className="mt-12 flex flex-col items-center gap-4">
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map(i => {})}
-              </div>
               <span>Mais de 100+ clientes premium</span>
             </div>
             <p className="text-xs text-muted-foreground">
