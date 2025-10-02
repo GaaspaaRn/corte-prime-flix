@@ -40,17 +40,17 @@ const AssinaturaHero = () => {
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-accent bg-clip-text text-transparent">
-              Sua melhor versão,
+              Cortes e Barbas ilimitadas,
             </span>
             <br />
-            <span className="text-foreground">todos os dias</span>
+            <span className="text-foreground">Por uma mensalidade fixa</span>
           </h1>
           
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Acesso ilimitado aos melhores serviços de barbearia premium. 
-            <span className="text-primary font-semibold"> Exclusividade e praticidade </span>
-            em um só plano.
+            Economize dinheiro e  
+            <span className="text-primary font-semibold"> corte quando quiser </span>
+            com a qualidade da Barbearia Premium. 
           </p>
           
           {/* CTA Button */}
@@ -65,7 +65,7 @@ const AssinaturaHero = () => {
               <span>Mais de 100+ clientes premium</span>
             </div>
             <p className="text-xs text-muted-foreground">
-              ⚠️ <span className="text-primary font-semibold">Vagas limitadas</span> - Restam poucas assinaturas disponíveis
+              ⚠️ <span className="text-primary font-semibold">Vagas limitadas</span> - Restam 30 assinaturas disponíveis
             </p>
           </div>
         </div>
