@@ -15,10 +15,7 @@ const AssinaturaFAQ = () => {
     answer: "Recomendamos agendar para garantir seu horário, especialmente em períodos de maior movimento. Assinantes premium têm prioridade no agendamento."
   }, {
     question: "Que serviços estão inclusos na assinatura?",
-    answer: "Depende do seu plano: Barba (R$69,90) inclui todos os serviços de barba. Cabelo (R$79,90) inclui cortes e tratamentos capilares. Completo (R$139,90) inclui tudo: cabelo, barba, lavagem, finalização e produtos premium."
-  }, {
-    question: "Posso pausar minha assinatura por férias ou viagem?",
-    answer: "Sim! Você pode pausar sua assinatura por até 60 dias por ano, ideal para férias ou viagens longas. Basta avisar com antecedência."
+    answer: "Depende do seu plano: Barba (R$69,90) inclui todos os serviços de barba. Cabelo (R$79,90) inclui todos os serviços de corte. Completo (R$139,90) inclui tudo: cabelo, barba, lavagem, finalização e produtos premium."
   }, {
     question: "Os produtos utilizados são de qualidade premium?",
     answer: "Absolutamente! Trabalhamos apenas com produtos de marcas premium nacionais e importadas. Todos os produtos aplicados durante os serviços estão inclusos na assinatura."
