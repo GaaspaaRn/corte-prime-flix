@@ -10,7 +10,7 @@ const AssinaturaPlanos = () => {
     price: '69,90',
     icon: Sparkles,
     popular: false,
-    features: ['Barba completa ilimitada', 'Aparar e modelar', 'Produtos premium inclusos', 'Atendimento personalizado'],
+    features: ['Barba completa ilimitada', 'Produtos premium inclusos', 'Atendimento personalizado', 'Sem multa/fidelidade'],
     ctaText: 'Ver detalhes do Plano'
   }, {
     id: 'cabelo',
@@ -19,7 +19,7 @@ const AssinaturaPlanos = () => {
     price: '79,90',
     icon: Scissors,
     popular: false,
-    features: ['Corte masculino ilimitado', 'Lavagem e finalização', 'Produtos premium inclusos', 'Atendimento personalizado'],
+    features: ['Corte masculino ilimitado', 'Produtos premium inclusos', 'Atendimento personalizado', 'Sem multa/fidelidade'],
     ctaText: 'Ver detalhes do Plano'
   }, {
     id: 'completo',
@@ -28,7 +28,7 @@ const AssinaturaPlanos = () => {
     price: '139,90',
     icon: Crown,
     popular: true,
-    features: ['Cabelo + Barba ilimitados', 'Todos os serviços inclusos', 'Produtos premium inclusos', 'Atendimento VIP exclusivo'],
+    features: ['Cabelo + Barba ilimitados', 'Todos os produtos e serviços inclusos', 'Atendimento VIP exclusivo', 'Sem multa/fidelidade'],
     ctaText: 'Ver detalhes do Plano'
   }];
   const handlePlanoClick = (planoId: string) => {
@@ -40,10 +40,10 @@ const AssinaturaPlanos = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Escolha seu 
-            <span className="bg-gradient-accent bg-clip-text text-transparent"> Plano Premium</span>
+            Faça parte da 
+            <span className="bg-gradient-accent bg-clip-text text-transparent"> Barbearia Premium </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Planos ilimitados pensados para quem entende que a imagem não é custo, é investimento. *PLANOS SEM FIDELIDADE*</p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Clube ilimitado pensado para quem entende que a imagem não é custo, é investimento.</p>
         </div>
 
         {/* Plans Grid */}
