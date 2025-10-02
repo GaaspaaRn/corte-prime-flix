@@ -21,7 +21,7 @@ const AssinaturaBeneficios = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Por que escolher a 
+            Por que escolher 
             <span className="bg-gradient-accent bg-clip-text text-transparent"> o clube Premium?</span>
           </h2>
         </div>
