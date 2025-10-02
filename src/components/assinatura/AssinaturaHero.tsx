@@ -40,10 +40,10 @@ const AssinaturaHero = () => {
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-accent bg-clip-text text-transparent">
-              Cortes e Barbas ilimitadas,
+              Cortes ilimitados,
             </span>
             <br />
-            <span className="text-foreground">Por uma mensalidade fixa</span>
+            <span className="text-foreground">No clube Premium</span>
           </h1>
           
           {/* Subheadline */}
