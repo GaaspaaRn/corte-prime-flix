@@ -6,7 +6,7 @@ const AssinaturaBeneficios = () => {
   const beneficios = [{
     icon: Infinity,
     title: "Acesso Ilimitado",
-    description: "Quantas vezes quiser no mês. Sem limites, sem pressa, sem preocupação."
+    description: "Corte quantas vezes quiser no mês. Sem limites e sem preocupação."
   }, {
     icon: Crown,
     title: "Experiência Premium",
