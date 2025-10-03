@@ -43,7 +43,7 @@ const AssinaturaHero = () => {
               Cortes ilimitados,
             </span>
             <br />
-            <span className="text-foreground">No clube Premium</span>
+            <span className="text-foreground">no clube Premium</span>
           </h1>
           
           {/* Subheadline */}
