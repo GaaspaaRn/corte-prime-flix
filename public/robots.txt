@@ -1,0 +1,34 @@
+# Robots.txt para Barbearia Premium Joinville
+User-agent: *
+Allow: /
+
+# Permitir todos os crawlers nos arquivos principais
+Allow: /images/
+Allow: /android-chrome-*.png
+Allow: /apple-touch-icon.png
+Allow: /favicon*.png
+Allow: /favicon.ico
+Allow: /manifest.json
+Allow: /sitemap.xml
+
+# Sitemap
+Sitemap: https://barbeariapremiumjoinville.com/sitemap.xml
+
+# Crawl-delay para evitar sobrecarga
+Crawl-delay: 1
+
+# User-agents específicos
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /

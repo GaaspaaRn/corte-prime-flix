@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicons and PWA Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#FFD700">
+    <meta name="msapplication-TileColor" content="#141414">
+    <meta name="msapplication-TileImage" content="/android-chrome-192x192.png">
+    <meta name="theme-color" content="#FFD700">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Barbearia Premium JLE">
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <title>🏆 Barbearia Premium Joinville | Cortes e Barba no Comasa</title>
+    <meta name="description" content="🏆 Melhor Barbearia de Joinville! Ambiente Premium especializado em cortes masculinos e barbas no Comasa. Agende já, localizada na Zona Leste na Rua Alferes Schimidt 78." />
+    <meta name="keywords" content="barbearia joinville, barbearia comasa, corte masculino joinville, barba joinville, barbearia premium joinville, alferes schimidt, melhor barbearia joinville, corte degradê, barba completa, barbeiro profissional" />
+    <meta name="author" content="Barbearia Premium Joinville" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://barbeariapremiumjoinville.com/" />
+    
+    <!-- Geo and Local SEO Tags -->
+    <meta name="geo.region" content="BR-SC" />
+    <meta name="geo.placename" content="Joinville, Santa Catarina" />
+    <meta name="geo.position" content="-26.3044;-48.8487" />
+    <meta name="ICBM" content="-26.3044, -48.8487" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global" />
+    <meta name="language" content="pt-BR" />
+    <meta name="revisit-after" content="1 days" />
+    
+    <!-- Enhanced Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://barbeariapremiumjoinville.com/" />
+    <meta property="og:title" content="🏆 Barbearia Premium Joinville | Cortes e Barba no Comasa" />
+    <meta property="og:description" content="🏆 Melhor Barbearia de Joinville! Ambiente Premium especializado em cortes masculinos e barbas no Comasa. Agende já, localizada na Zona Leste na Rua Alferes Schimidt 78." />
+    <meta property="og:image" content="https://barbeariapremiumjoinville.com/images/hero/background-hero.webp" />
+    <meta property="og:image:secure_url" content="https://barbeariapremiumjoinville.com/images/hero/background-hero.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Interior da Barbearia Premium Joinville - Ambiente moderno e aconchegante" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:site_name" content="Barbearia Premium Joinville" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="business:contact_data:street_address" content="Rua Alferes Schimidt, 78" />
+    <meta property="business:contact_data:locality" content="Joinville" />
+    <meta property="business:contact_data:region" content="Santa Catarina" />
+    <meta property="business:contact_data:postal_code" content="89204-040" />
+    <meta property="business:contact_data:country_name" content="Brasil" />
+    <meta property="place:location:latitude" content="-26.3044" />
+    <meta property="place:location:longitude" content="-48.8487" />
+    
+    <!-- Enhanced Twitter Cards -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:site" content="@barbeariapremiumjoinville" />
+    <meta property="twitter:creator" content="@barbeariapremiumjoinville" />
+    <meta property="twitter:url" content="https://barbeariapremiumjoinville.com/" />
+    <meta property="twitter:title" content="🏆 Barbearia Premium Joinville | Cortes e Barba no Comasa" />
+    <meta property="twitter:description" content="🏆 Melhor Barbearia de Joinville! Ambiente Premium especializado em cortes masculinos e barbas no Comasa. Agende já, localizada na Zona Leste na Rua Alferes Schimidt 78." />
+    <meta property="twitter:image" content="https://barbeariapremiumjoinville.com/images/hero/background-hero.webp" />
+    <meta property="twitter:image:alt" content="Interior da Barbearia Premium Joinville - Ambiente moderno e aconchegante" />
+    <meta name="twitter:label1" content="Localização" />
+    <meta name="twitter:data1" content="Comasa, Joinville - SC" />
+    <meta name="twitter:label2" content="Experiência" />
+    <meta name="twitter:data2" content="5+ anos" />
+    
+    <!-- Preload Critical Resources for Performance -->
+    <link rel="preload" href="/images/hero/background-hero.webp" as="image" type="image/webp" />
+    <link rel="preload" href="/images/logo/logo-principal.webp" as="image" type="image/webp" />
+    <link rel="preload" href="/android-chrome-512x512.png" as="image" type="image/png" />
+    
+    <!-- DNS Prefetch for external resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    
+    <!-- Preconnect to critical third parties -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Enhanced Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Barbearia Premium Joinville",
+      "alternateName": "Barbearia Premium JLE",
+      "image": [
+        "https://barbeariapremiumjoinville.com/images/hero/background-hero.webp",
+        "https://barbeariapremiumjoinville.com/images/gallery/ambiente/salao-principal.webp",
+        "https://barbeariapremiumjoinville.com/images/gallery/cortes/corte-classico.webp"
+      ],
+      "logo": "https://barbeariapremiumjoinville.com/android-chrome-512x512.png",
+      "description": "Barbearia premium com mais de 5 anos de experiência em cortes masculinos e barbas, localizada no coração do Comasa em Joinville. Especialistas em cortes clássicos, modernos e barbas completas.",
+      "slogan": "5+ anos transformando o visual masculino em Joinville",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Alferes Schimidt, 78",
+        "addressLocality": "Joinville",
+        "addressRegion": "SC",
+        "postalCode": "89204-040",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-26.3044",
+        "longitude": "-48.8487"
+      },
+      "url": "https://barbeariapremiumjoinville.com",
+      "telephone": "+55 (47) 99999-9999",
+      "email": "contato@barbeariapremiumjoinville.com",
+      "priceRange": "$$",
+      "currenciesAccepted": "BRL",
+      "paymentAccepted": "Dinheiro, PIX, Cartão de Débito, Cartão de Crédito",
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "-26.3044",
+          "longitude": "-48.8487"
+        },
+        "geoRadius": "50000"
+      },
+      "serviceArea": [
+        "Joinville",
+        "Comasa",
+        "Centro",
+        "Zona Norte"
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "17:00"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços de Barbearia Premium",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Corte Masculino Clássico",
+              "description": "Corte de cabelo masculino tradicional e elegante",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Barbearia Premium Joinville"
+              }
+            },
+            "priceRange": "$$"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Corte Moderno",
+              "description": "Cortes masculinos modernos e estilosos",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Barbearia Premium Joinville"
+              }
+            },
+            "priceRange": "$$"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Barba Completa",
+              "description": "Corte, modelagem e tratamento completo de barba",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Barbearia Premium Joinville"
+              }
+            },
+            "priceRange": "$$"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Degradê na Barba",
+              "description": "Técnica especializada de degradê para barbas",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Barbearia Premium Joinville"
+              }
+            },
+            "priceRange": "$$"
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "João Silva"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Excelente atendimento! Melhor barbearia de Joinville, profissionais muito competentes."
+        }
+      ]
+    }
+    </script>
+
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Barbearia Premium Joinville",
+      "alternateName": "Barbearia Premium JLE",
+      "url": "https://barbeariapremiumjoinville.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://barbeariapremiumjoinville.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Barbearia Premium Joinville",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://barbeariapremiumjoinville.com/android-chrome-512x512.png",
+          "width": 512,
+          "height": 512
+        },
+        "sameAs": [
+          "https://www.instagram.com/barbeariapremiumjoinville",
+          "https://www.facebook.com/barbeariapremiumjoinville"
+        ]
+      },
+      "mainEntity": {
+        "@type": "LocalBusiness",
+        "name": "Barbearia Premium Joinville"
+      }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Onde fica a Barbearia Premium Joinville?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estamos localizados na Rua Alferes Schimidt, 78, no bairro Comasa, em Joinville - SC."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual o horário de funcionamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Funcionamos de segunda a sexta das 8h às 18h, e aos sábados das 8h às 17h."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso agendar horário?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, recomendamos agendamento prévio através do WhatsApp para garantir seu horário preferido."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais serviços vocês oferecem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oferecemos cortes masculinos clássicos e modernos, barba completa, degradê na barba e outros serviços especializados."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://barbeariapremiumjoinville.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Serviços",
+          "item": "https://barbeariapremiumjoinville.com/#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sobre",
+          "item": "https://barbeariapremiumjoinville.com/#about"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    
+    <!-- Performance hints -->
+    <link rel="prefetch" href="/images/gallery/cortes/corte-classico.webp" />
+    <link rel="prefetch" href="/images/gallery/barbas/barba-completa.webp" />
+    <link rel="prefetch" href="/images/gallery/ambiente/salao-principal.webp" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '773015858679892');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+  </head>
+
+  <body>
+    <!-- Meta Pixel Code (noscript fallback) -->
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=773015858679892&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Google Analytics / Google Tag Manager would go here -->
+    
+    <!-- Additional Review Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "LocalBusiness",
+        "name": "Barbearia Premium Joinville",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Alferes Schimidt, 78",
+          "addressLocality": "Joinville",
+          "addressRegion": "SC",
+          "postalCode": "89204-040",
+          "addressCountry": "BR"
+        }
+      },
+      "author": {
+        "@type": "Person",
+        "name": "João Silva"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Excelente atendimento! Melhor barbearia de Joinville, profissionais muito competentes. Ambiente moderno e aconchegante no Comasa.",
+      "datePublished": "2024-01-15"
+    }
+    </script>
+
+    <!-- Article Schema for SEO boost -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Barbearia Premium Joinville - 5+ Anos de Experiência no Comasa",
+      "description": "Conheça a melhor barbearia de Joinville, localizada no coração do Comasa. Especialistas em cortes masculinos e barbas.",
+      "image": "https://barbeariapremiumjoinville.com/images/hero/background-hero.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "Barbearia Premium Joinville"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Barbearia Premium Joinville",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://barbeariapremiumjoinville.com/android-chrome-512x512.png"
+        }
+      },
+      "datePublished": "2024-01-01",
+      "dateModified": "2024-01-29"
+    }
+    </script>
+  </body>
+</html>
