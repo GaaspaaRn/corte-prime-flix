@@ -19,13 +19,28 @@ const Footer = () => {
               Sempre oferecendo o melhor em cuidados masculinos, combinando tradição e modernidade em cada atendimento.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href="https://www.instagram.com/barbeariapremiumjoinville/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href="https://www.facebook.com/profile.php?id=61580976826725"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href="https://wa.me/5547988984877?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20barbearia."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 <MessageCircle className="w-5 h-5" />
               </a>
             </div>
