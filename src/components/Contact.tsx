@@ -98,21 +98,21 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <div className="aspect-video rounded-lg overflow-hidden">
-                  <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.655208435702!2d-48.807446924582415!3d-26.27285147703436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb1004ce77c39%3A0x3d4b5a580455a09!2sBarbearia%20Premium!5e0!3m2!1spt-BR!2sbr!4v1753813720749!5m2!1spt-BR!2sbr" 
-                    width="100%" 
-                    height="100%" 
-                    style={{border: 0}} 
-                    allowFullScreen 
-                    loading="lazy" 
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.655208435702!2d-48.807446924582415!3d-26.27285147703436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb1004ce77c39%3A0x3d4b5a580455a09!2sBarbearia%20Premium!5e0!3m2!1spt-BR!2sbr!4v1753813720749!5m2!1spt-BR!2sbr"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Localização da Barbearia Premium"
                   />
                 </div>
                 <Button className="w-full mt-4" asChild>
-                  <a 
-                    href="https://maps.app.goo.gl/JpT9MR6PvDcPCzJa7" 
-                    target="_blank" 
+                  <a
+                    href="https://maps.app.goo.gl/JpT9MR6PvDcPCzJa7"
+                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     <MapPin className="h-4 w-4 mr-2" />
@@ -149,7 +149,7 @@ const Contact = () => {
               </div>
               <div>
                 <label className="text-sm font-medium">Mensagem</label>
-                <Textarea 
+                <Textarea
                   placeholder="Conte-nos como podemos ajudá-lo..."
                   className="min-h-[120px]"
                 />

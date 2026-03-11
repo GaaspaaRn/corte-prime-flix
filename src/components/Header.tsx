@@ -13,9 +13,9 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src="/images/logo/logo-principal.png" 
-              alt="Barbearia Premium" 
+            <img
+              src="/images/logo/logo-principal.png"
+              alt="Barbearia Premium"
               className="h-12 w-auto"
             />
           </div>
@@ -29,7 +29,7 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA Button */}
-          <Button variant="default" className="hidden md:flex shadow-glow" onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}>
+          <Button variant="default" className="hidden md:flex shadow-glow" onClick={() => window.open(`https://wa.me/5547988984877?text=${encodeURIComponent('Olá! Gostaria de agendar um horário na Barbearia Premium.')}`, '_blank')}>
             Agendar Horário
           </Button>
 
@@ -54,9 +54,9 @@ const Header = () => {
                 </a>
                 <div className="pt-4 border-t border-border">
                   <Button variant="default" className="w-full shadow-glow" onClick={() => {
-                  window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank');
-                  setIsOpen(false);
-                }}>
+                    window.open(`https://wa.me/5547988984877?text=${encodeURIComponent('Olá! Gostaria de agendar um horário na Barbearia Premium.')}`, '_blank');
+                    setIsOpen(false);
+                  }}>
                     Agendar Horário
                   </Button>
                 </div>

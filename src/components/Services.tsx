@@ -55,8 +55,8 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className={`
                 group relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-card
                 ${service.featured ? 'ring-2 ring-primary/50 shadow-glow' : ''}
@@ -68,7 +68,7 @@ const Services = () => {
                   POPULAR
                 </div>
               )}
-              
+
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-4">
                   <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
@@ -82,7 +82,7 @@ const Services = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <CardTitle className="text-xl">{service.title}</CardTitle>
                 <CardDescription className="text-muted-foreground">
                   {service.description}
@@ -99,10 +99,10 @@ const Services = () => {
                   ))}
                 </div>
 
-                <Button 
+                <Button
                   className={`w-full ${service.featured ? 'shadow-glow' : ''}`}
                   variant={service.featured ? 'default' : 'outline'}
-                  onClick={() => window.open('https://sites.appbarber.com.br/BarbeariaPremiumjlle', '_blank')}
+                  onClick={() => window.open(`https://wa.me/5547988984877?text=${encodeURIComponent(`Olá! Gostaria de agendar o serviço de ${service.title}.`)}`, '_blank')}
                 >
                   Agendar Serviço
                 </Button>
