@@ -12,7 +12,7 @@ Allow: /manifest.json
 Allow: /sitemap.xml
 
 # Sitemap
-Sitemap: https://barbeariapremiumjoinville.com/sitemap.xml
+Sitemap: https://www.barbeariapm.com/sitemap.xml
 
 # Crawl-delay para evitar sobrecarga
 Crawl-delay: 1

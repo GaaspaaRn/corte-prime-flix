@@ -19,7 +19,7 @@ const Contact = () => {
   }, {
     icon: Mail,
     title: "E-mail",
-    info: "contato@barbeariapremiumjoinville.com\nagendamento@barbeariapremiumjoinville.com"
+    info: "contato@barbeariapm.com\nagendamento@barbeariapm.com"
   }];
   const socialLinks = [{
     icon: Instagram,

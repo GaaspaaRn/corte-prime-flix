@@ -13,7 +13,7 @@ const SEOHelmet = ({
   description = "🏆 Melhor Barbearia de Joinville! 5+ anos de experiência em cortes masculinos e barbas no Comasa. Localizada na Rua Alferes Schimidt 78. Agende já!",
   keywords = "barbearia joinville, barbearia comasa, corte masculino joinville, barba joinville, barbearia premium joinville",
   image = "/images/hero/background-hero.webp",
-  url = "https://barbeariapremiumjoinville.com/"
+  url = "https://www.barbeariapm.com/"
 }: SEOHelmetProps) => {
   
   useEffect(() => {
