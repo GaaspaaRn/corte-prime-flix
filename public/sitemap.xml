@@ -10,11 +10,6 @@
     <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <url>
-    <loc>https://www.barbeariapm.com/assinatura</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.barbeariapm.com/images/hero/background-hero.webp</image:loc>
       <image:title>Barbearia Premium Joinville - Ambiente Principal</image:title>
@@ -30,4 +25,10 @@
       <image:title>Corte Clássico Masculino</image:title>
       <image:caption>Exemplo de corte clássico masculino da Barbearia Premium</image:caption>
     </image:image>
+  </url>
+  <url>
+    <loc>https://www.barbeariapm.com/assinatura</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
 </urlset>
