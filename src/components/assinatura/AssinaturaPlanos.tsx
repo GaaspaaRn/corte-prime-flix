@@ -1,102 +1,156 @@
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Check, Crown, Scissors, Sparkles } from "lucide-react";
+
 const AssinaturaPlanos = () => {
-  const planos = [{
-    id: 'barba',
-    name: 'Premium Barba',
-    subtitle: 'ILIMITADO',
-    price: '79,90',
-    icon: Sparkles,
-    popular: false,
-    features: ['Barba completa ilimitada', 'Produtos premium inclusos', 'Atendimento personalizado', 'Sem multa/fidelidade'],
-    ctaText: 'Ver detalhes do Plano'
-  }, {
-    id: 'cabelo',
-    name: 'Premium Cabelo',
-    subtitle: 'ILIMITADO',
-    price: '89,90',
-    icon: Scissors,
-    popular: false,
-    features: ['Corte masculino ilimitado', 'Produtos premium inclusos', 'Atendimento personalizado', 'Sem multa/fidelidade'],
-    ctaText: 'Ver detalhes do Plano'
-  }, {
-    id: 'completo',
-    name: 'Premium Completo',
-    subtitle: 'CABELO + BARBA ILIMITADO',
-    price: '149,90',
-    icon: Crown,
-    popular: true,
-    features: ['Cabelo + Barba ilimitados', 'Todos os produtos e serviços inclusos', 'Atendimento VIP exclusivo', 'Sem multa/fidelidade'],
-    ctaText: 'Ver detalhes do Plano'
-  }];
+  const planos = [
+    {
+      id: 'barba',
+      name: 'Premium Barba',
+      subtitle: 'BARBA ILIMITADA',
+      price: '79,90',
+      icon: Sparkles,
+      popular: false,
+      features: [
+        'Barba completa ilimitada', 
+        'Estilização avançada',
+        'Café expresso cortesia',
+        'Produtos premium inclusos', 
+        'Atendimento prioritário', 
+        'Sem multa · Sem fidelidade'
+      ],
+      ctaText: 'Assinar Plano Barba'
+    }, 
+    {
+      id: 'completo',
+      name: 'Premium Completo',
+      subtitle: 'CABELO + BARBA ILIMITADO',
+      price: '149,90',
+      icon: Crown,
+      popular: true,
+      features: [
+        'Cabelo + Barba ilimitados', 
+        'Lavagem com massagem inclusa',
+        'Finalização com pomadas premium',
+        'Café expresso cortesia sempre',
+        'Prioridade máxima no agendamento', 
+        'Sem multa · Sem fidelidade'
+      ],
+      ctaText: 'ASSINAR PLANO COMPLETO'
+    },
+    {
+      id: 'cabelo',
+      name: 'Premium Cabelo',
+      subtitle: 'CABELO ILIMITADO',
+      price: '89,90',
+      icon: Scissors,
+      popular: false,
+      features: [
+        'Corte masculino ilimitado', 
+        'Lavagem e finalização',
+        'Café expresso cortesia',
+        'Produtos premium inclusos', 
+        'Atendimento prioritário', 
+        'Sem multa · Sem fidelidade'
+      ],
+      ctaText: 'Assinar Plano Cabelo'
+    }
+  ];
+
   const handlePlanoClick = (planoId: string) => {
-    // Here you would integrate with your payment system
-    window.open('https://wa.me/5547988984877?text=Olá! Gostaria de assinar o plano ' + planoId, '_blank');
+    let message = 'Olá! Gostaria de assinar o plano ';
+    if (planoId === 'completo') message += 'Premium Completo (R$149,90)';
+    if (planoId === 'cabelo') message += 'Premium Cabelo (R$89,90)';
+    if (planoId === 'barba') message += 'Premium Barba (R$79,90)';
+    window.open(`https://wa.me/5547988984877?text=${encodeURIComponent(message)}`, '_blank');
   };
-  return <section id="planos" className="py-20 px-4 bg-gradient-hero">
-      <div className="max-w-7xl mx-auto">
+
+  return (
+    <section id="planos" className="py-32 px-6 bg-background relative">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Faça parte da 
-            <span className="bg-gradient-accent bg-clip-text text-transparent"> Barbearia Premium </span>
+        <div className="text-center mb-20 reveal">
+          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-border text-xs font-bold uppercase tracking-[0.15em] text-primary mb-6">
+            ✦ Planos de Assinatura
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
+            Escolha o seu <span className="text-gold-gradient">nível.</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Clube ilimitado pensado para quem entende que a imagem não é custo, é investimento.</p>
+          <p className="text-lg text-muted-foreground max-w-lg mx-auto">
+            Sem fidelidade. Cancele quando quiser. Sem multa.
+          </p>
         </div>
 
         {/* Plans Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {planos.map((plano, index) => <Card key={plano.id} className={`relative p-8 bg-gradient-card border transition-all duration-300 hover:shadow-glow/20 animate-fade-in-up ${plano.popular ? 'border-primary/50 shadow-glow/30 scale-105 lg:scale-110' : 'border-border/50 hover:border-primary/30'}`} style={{
-          animationDelay: `${index * 0.2}s`
-        }}>
-              {/* Popular Badge */}
-              {plano.popular && <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1">
-                  MAIS POPULAR
-                </Badge>}
-
-              <div className="text-center space-y-6">
-                {/* Icon */}
-                <div className={`inline-flex p-4 rounded-2xl ${plano.popular ? 'bg-primary/20' : 'bg-primary/10'}`}>
-                  <plano.icon className={`h-8 w-8 ${plano.popular ? 'text-primary' : 'text-primary'}`} />
-                </div>
-
-                {/* Plan Name */}
-                <div>
-                  <h3 className="text-2xl font-bold text-foreground mb-2">{plano.name}</h3>
-                  <p className="text-sm text-primary font-semibold">{plano.subtitle}</p>
-                </div>
-
-                {/* Price */}
-                <div className="space-y-2">
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-2xl font-bold text-foreground">R$</span>
-                    <span className="text-5xl font-bold text-foreground">{plano.price}</span>
-                    <span className="text-muted-foreground">/mês</span>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
+          {planos.map((plano, index) => {
+            const isPopular = plano.popular;
+            const Icon = plano.icon;
+            
+            return (
+              <div 
+                key={plano.id} 
+                className={`reveal delay-${index + 1} relative rounded-3xl p-8 md:p-10 transition-all duration-500 flex flex-col ${
+                  isPopular 
+                    ? 'bg-card border border-primary/40 shadow-glow lg:scale-[1.03] z-10' 
+                    : 'bg-card border border-border hover:border-border/80'
+                }`}
+              >
+                {/* Popular Badge */}
+                {isPopular && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                    <span className="bg-gradient-gold text-primary-foreground px-6 py-2 rounded-full text-xs font-black uppercase tracking-[0.1em] shadow-card whitespace-nowrap">
+                      O MAIS ESCOLHIDO
+                    </span>
                   </div>
-                  <p className="text-sm text-muted-foreground">Cobrado mensalmente</p>
-                </div>
+                )}
 
-                {/* Features */}
-                <div className="space-y-3 text-left">
-                  {plano.features.map((feature, idx) => <div key={idx} className="flex items-center gap-3">
-                      <Check className="h-5 w-5 text-primary flex-shrink-0" />
-                      <span className="text-muted-foreground">{feature}</span>
-                    </div>)}
-                </div>
+                <div className="flex flex-col flex-grow">
+                  {/* Icon & Name */}
+                  <div className="mb-8 mt-2">
+                    <Icon className={`h-6 w-6 mb-4 ${isPopular ? 'text-primary' : 'text-muted-foreground'}`} strokeWidth={1.5} />
+                    <h3 className="text-xl font-bold text-foreground">{plano.name}</h3>
+                    <p className="text-xs font-bold text-primary uppercase tracking-[0.15em] mt-1">{plano.subtitle}</p>
+                  </div>
 
-                {/* CTA Button */}
-                <Button onClick={() => handlePlanoClick(plano.id)} className={`w-full font-bold py-6 h-auto rounded-xl transition-all duration-300 ${plano.popular ? 'bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow hover:shadow-glow/80 hover:scale-105' : 'bg-secondary hover:bg-secondary/80 text-secondary-foreground hover:border-primary/50'}`} variant={plano.popular ? 'default' : 'secondary'}>
-                  {plano.ctaText}
-                </Button>
+                  {/* Price */}
+                  <div className="mb-8 pb-8 border-b border-border">
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-base font-bold text-foreground/60">R$</span>
+                      <span className="text-5xl font-black text-foreground tracking-tight">{plano.price}</span>
+                      <span className="text-sm text-muted-foreground font-medium">/mês</span>
+                    </div>
+                  </div>
+
+                  {/* Features */}
+                  <div className="space-y-4 flex-grow mb-10">
+                    {plano.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-start gap-3">
+                        <Check className={`h-4 w-4 mt-0.5 flex-shrink-0 ${isPopular ? 'text-primary' : 'text-muted-foreground'}`} strokeWidth={2.5} />
+                        <span className="text-sm text-muted-foreground">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* CTA Button */}
+                  <Button 
+                    onClick={() => handlePlanoClick(plano.id)} 
+                    className={`w-full font-bold text-sm uppercase tracking-[0.05em] py-6 h-auto rounded-full transition-all duration-300 ${
+                      isPopular 
+                        ? 'bg-gradient-gold text-primary-foreground hover:scale-[1.02] active:scale-[0.98] hover:shadow-glow' 
+                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:text-primary'
+                    }`} 
+                    variant={isPopular ? 'default' : 'secondary'}
+                  >
+                    {plano.ctaText}
+                  </Button>
+                </div>
               </div>
-            </Card>)}
+            )
+          })}
         </div>
-
-        {/* Bottom CTA */}
-        
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default AssinaturaPlanos;

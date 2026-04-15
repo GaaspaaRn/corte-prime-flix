@@ -1,74 +1,90 @@
-import { Card } from "@/components/ui/card";
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
+
 const AssinaturaProvaSocial = () => {
-  const depoimentos = [{
-    nome: "Airton Ferreira",
-    texto: "Muito profissionalismo. Parabéns pela qualidade do serviço e atenção ao cliente. Transmitem tradição acompanhada de modernidade.",
-    rating: 5
-  }, {
-    nome: "FR Multimarcas",
-    texto: "Ambiente 100%, melhor atendimento que ja presenciei, ja recomendei para todos os amigos, parabens",
-    rating: 5
-  }, {
-    nome: "Fabio Manske",
-    texto: "Atendimento, ambiente, corte tudo de excelente qualidade....recomendo demais",
-    rating: 5
-  }, {
-    nome: "Leandro Michalak Da Silva",
-    texto: "Ambiente e atendimento sensacional, profissional de qualidade e com muito talento, com certeza a melhor de Joinville região, Top demais",
-    rating: 5
-  }, {
-    nome: "Fernando Cracco",
-    texto: "Ambiente muito bom e aconchegante, profissional de qualidade e atencioso.",
-    rating: 5
-  }, {
-    nome: "Matheus Sapellini",
-    texto: "Experiência ótima, atendimento e qualidade nota 10! ambiente muito agradável e aconchegante!",
-    rating: 5
-  }];
-  return <section className="py-20 px-4 bg-background">
-      <div className="max-w-7xl mx-auto">
+  const depoimentos = [
+    {
+      nome: "Airton Ferreira",
+      texto: "Muito profissionalismo. Parabéns pela qualidade do serviço e atenção ao cliente. Transmitem tradição acompanhada de modernidade.",
+      rating: 5
+    },
+    {
+      nome: "FR Multimarcas",
+      texto: "Ambiente 100%, melhor atendimento que já presenciei, já recomendei para todos os amigos, parabéns!",
+      rating: 5
+    },
+    {
+      nome: "Fabio Manske",
+      texto: "Atendimento, ambiente, corte tudo de excelente qualidade... recomendo demais.",
+      rating: 5
+    },
+    {
+      nome: "Leandro Michalak",
+      texto: "Ambiente e atendimento sensacional, profissional de qualidade e com muito talento, com certeza a melhor de Joinville.",
+      rating: 5
+    },
+    {
+      nome: "Fernando Cracco",
+      texto: "Ambiente muito bom e aconchegante, profissional de qualidade e atencioso.",
+      rating: 5
+    },
+    {
+      nome: "Matheus Sapellini",
+      texto: "Experiência ótima, atendimento e qualidade nota 10! Ambiente muito agradável e aconchegante!",
+      rating: 5
+    }
+  ];
+
+  return (
+    <section className="py-32 px-6 bg-card/30">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            O que nossos 
-            <span className="bg-gradient-accent bg-clip-text text-transparent"> clientes premium </span>
-            estão dizendo
+        <div className="text-center mb-20 reveal">
+          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-border text-xs font-bold uppercase tracking-[0.15em] text-primary mb-6">
+            ✦ Prova Social
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
+            O que dizem nossos <span className="text-gold-gradient">clientes.</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Mais de 100 homens já transformaram sua rotina com nossa assinatura ilimitada</p>
+          <p className="text-lg text-muted-foreground max-w-lg mx-auto">
+            +100 homens já transformaram sua rotina com nossa assinatura ilimitada.
+          </p>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {depoimentos.map((depoimento, index) => <Card key={index} className="p-6 bg-gradient-card border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-glow/20 animate-fade-in-up" style={{
-          animationDelay: `${index * 0.1}s`
-        }}>
-              <div className="space-y-4">
-                {/* Quote Icon */}
-                <Quote className="h-8 w-8 text-primary/50" />
-                
-                {/* Rating */}
-                <div className="flex gap-1">
-                  {[...Array(depoimento.rating)].map((_, i) => <Star key={i} className="h-4 w-4 fill-primary text-primary" />)}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {depoimentos.map((depoimento, index) => (
+            <div 
+              key={index} 
+              className={`reveal delay-${Math.min(index + 1, 5)} p-8 rounded-3xl border border-border bg-card hover:border-primary/30 transition-all duration-300`}
+            >
+              {/* Stars */}
+              <div className="flex gap-0.5 mb-5">
+                {[...Array(depoimento.rating)].map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                ))}
+              </div>
+              
+              {/* Quote */}
+              <p className="text-foreground/80 leading-relaxed text-sm mb-6">
+                "{depoimento.texto}"
+              </p>
+              
+              {/* Author */}
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-xs font-bold text-muted-foreground">
+                  {depoimento.nome.charAt(0)}
                 </div>
-                
-                {/* Testimonial Text */}
-                <p className="text-muted-foreground leading-relaxed italic">
-                  "{depoimento.texto}"
-                </p>
-                
-                {/* Author */}
-                <div className="pt-4 border-t border-border/50">
-                  <p className="font-semibold text-foreground">{depoimento.nome}</p>
-                  <p className="text-sm text-primary">Cliente Premium</p>
+                <div>
+                  <p className="font-semibold text-foreground text-sm">{depoimento.nome}</p>
+                  <p className="text-xs text-primary">Cliente Premium</p>
                 </div>
               </div>
-            </Card>)}
+            </div>
+          ))}
         </div>
-
-        {/* Stats */}
-        
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default AssinaturaProvaSocial;

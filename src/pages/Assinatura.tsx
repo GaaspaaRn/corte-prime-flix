@@ -1,40 +1,65 @@
-import { lazy, Suspense } from "react";
+import { useEffect } from "react";
 import SEOHelmet from "@/components/SEOHelmet";
 import Header from "@/components/Header";
-
-// Lazy load components for better performance
-const AssinaturaHero = lazy(() => import("@/components/assinatura/AssinaturaHero"));
-const AssinaturaBeneficios = lazy(() => import("@/components/assinatura/AssinaturaBeneficios"));
-const AssinaturaPlanos = lazy(() => import("@/components/assinatura/AssinaturaPlanos"));
-const Gallery = lazy(() => import("@/components/Gallery"));
-const AssinaturaProvaSocial = lazy(() => import("@/components/assinatura/AssinaturaProvaSocial"));
-const AssinaturaAutoridade = lazy(() => import("@/components/assinatura/AssinaturaAutoridade"));
-const AssinaturaFAQ = lazy(() => import("@/components/assinatura/AssinaturaFAQ"));
-const AssinaturaCTAFinal = lazy(() => import("@/components/assinatura/AssinaturaCTAFinal"));
-const Footer = lazy(() => import("@/components/Footer"));
-const FloatingButtons = lazy(() => import("@/components/FloatingButtons"));
+import Footer from "@/components/Footer";
+import FloatingButtons from "@/components/FloatingButtons";
+import AssinaturaHero from "@/components/assinatura/AssinaturaHero";
+import AssinaturaBeneficios from "@/components/assinatura/AssinaturaBeneficios";
+import AssinaturaComparativo from "@/components/assinatura/AssinaturaComparativo";
+import AssinaturaPlanos from "@/components/assinatura/AssinaturaPlanos";
+import AssinaturaAutoridade from "@/components/assinatura/AssinaturaAutoridade";
+import AssinaturaProvaSocial from "@/components/assinatura/AssinaturaProvaSocial";
+import AssinaturaFAQ from "@/components/assinatura/AssinaturaFAQ";
+import AssinaturaCTAFinal from "@/components/assinatura/AssinaturaCTAFinal";
 
 const Assinatura = () => {
+  useEffect(() => {
+    document.title = "Clube de Assinatura Premium | Barbearia Premium Joinville";
+    window.scrollTo(0, 0);
+
+    // Scroll-triggered reveal animation system
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    // Observe both .reveal and legacy .animate-on-scroll elements
+    document.querySelectorAll(".reveal, .animate-on-scroll").forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background selection:bg-primary/30 selection:text-primary">
       <SEOHelmet 
-        title="Assinatura Premium Ilimitada - Barbearia Premium Joinville"
-        description="🏆 Planos ilimitados a partir de R$69,90! Cabelo e barba quantas vezes quiser no mês. Experiência premium sem limites na melhor barbearia de Joinville."
-        keywords="assinatura barbearia, plano ilimitado barbearia, cabelo barba ilimitado joinville, barbearia premium assinatura"
+        title="Clube de Assinatura Premium | Barbearia Premium Joinville"
+        description="Assinaturas a partir de R$79,90! Cabelo e barba ilimitados, café expresso cortesia, e muito mais na melhor barbearia de Joinville."
+        keywords="assinatura barbearia, plano premium barbearia, cortar cabelo joinville, barba premium"
       />
       <Header />
-      <AssinaturaHero />
-      <Suspense fallback={<div className="h-20 bg-secondary/10 animate-pulse" />}>
+      
+      <main>
+        <AssinaturaHero />
+        <AssinaturaAutoridade />
+        <AssinaturaComparativo />
         <AssinaturaBeneficios />
         <AssinaturaPlanos />
-        <Gallery />
         <AssinaturaProvaSocial />
-        <AssinaturaAutoridade />
         <AssinaturaFAQ />
         <AssinaturaCTAFinal />
-        <Footer />
-        <FloatingButtons />
-      </Suspense>
+      </main>
+
+      <Footer />
+      <FloatingButtons />
     </div>
   );
 };
