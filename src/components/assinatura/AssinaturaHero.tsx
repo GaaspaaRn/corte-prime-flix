@@ -65,7 +65,7 @@ const AssinaturaHero = () => {
             onClick={handleWhatsAppClick} 
             variant="outline"
             size="lg" 
-            className="w-full sm:w-auto border-border text-foreground hover:border-primary hover:text-primary font-bold text-[15px] uppercase tracking-[0.05em] px-10 py-6 h-auto rounded-full transition-all duration-300 bg-transparent"
+            className="w-full sm:w-auto border-border text-foreground hover:border-primary hover:text-primary font-bold text-[15px] uppercase tracking-[0.05em] px-10 py-6 h-auto rounded-full transition-all duration-300 bg-transparent hover:bg-transparent"
           >
             Chamar no WhatsApp
           </Button>
