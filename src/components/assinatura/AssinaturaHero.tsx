@@ -14,14 +14,14 @@ const AssinaturaHero = () => {
 
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
-      {/* Background Image — barely visible */}
+      {/* Background Image — slightly visible */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.08]" 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.15]" 
         style={{ backgroundImage: "url('/hero-assinatura.webp')" }} 
       />
       
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/70 to-background" />
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto flex flex-col items-center py-32">
@@ -75,9 +75,9 @@ const AssinaturaHero = () => {
         <div className="reveal delay-4 mt-16 flex items-center gap-6">
           {/* Avatar Cluster */}
           <div className="flex -space-x-2">
-            {[1,2,3,4].map((i) => (
-              <div key={i} className="w-8 h-8 rounded-full bg-secondary border-2 border-background flex items-center justify-center text-xs font-bold text-muted-foreground">
-                {String.fromCharCode(64 + i)}
+            {['airtonferreira.png', 'frmultimarcas.png', 'fabiomanske.png', 'leandromichalak.png'].map((img, i) => (
+              <div key={i} className="w-8 h-8 rounded-full bg-secondary border-2 border-background flex items-center justify-center overflow-hidden shrink-0">
+                <img src={`/images/testimonials/${img}`} alt="Cliente Premium" className="w-full h-full object-cover" />
               </div>
             ))}
           </div>

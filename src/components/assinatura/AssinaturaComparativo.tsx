@@ -14,7 +14,7 @@ const AssinaturaComparativo = () => {
         {/* Section Header */}
         <div className="text-center mb-20 reveal">
           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-border text-xs font-bold uppercase tracking-[0.15em] text-primary mb-6">
-            ✦ A matemática não mente
+            A matemática não mente
           </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
             Pagar avulso é <span className="text-destructive">perder dinheiro.</span>
@@ -73,7 +73,7 @@ const AssinaturaComparativo = () => {
           <div className="reveal delay-2 border border-primary/40 bg-card rounded-3xl p-8 md:p-10 relative flex flex-col shadow-glow">
             {/* Glow */}
             <div className="absolute -top-20 -right-20 w-48 h-48 bg-primary/15 blur-[80px] rounded-full pointer-events-none" />
-            
+
             <div className="flex items-center gap-3 mb-10 relative z-10">
               <div className="bg-primary/15 p-2.5 rounded-full">
                 <Check className="h-5 w-5 text-primary" />
@@ -118,15 +118,29 @@ const AssinaturaComparativo = () => {
         </div>
 
         {/* Bottom Callout */}
-        <div className="mt-16 text-center reveal delay-3">
-          <div className="gradient-border-wrap inline-block">
-            <div className="bg-background rounded-full px-8 py-4 flex flex-col sm:flex-row items-center gap-4">
-              <p className="text-lg md:text-xl font-bold">
+        <div className="mt-16 text-center reveal delay-3 w-full">
+          {/* Mobile Layout (No Borders/Bg) */}
+          <div className="sm:hidden flex flex-col items-center gap-5 w-full px-2">
+            <p className="text-lg font-bold text-center text-foreground">
+              Você economiza mais de <br /><span className="text-primary font-black">R$ 150/mês</span>
+            </p>
+            <Button
+              onClick={handleCTAClick}
+              className="bg-gradient-gold text-primary-foreground rounded-full font-bold text-sm uppercase tracking-[0.05em] px-6 py-6 h-auto hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 whitespace-nowrap w-full"
+            >
+              Quero Economizar <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
+
+          {/* Desktop Layout (Pill with Gradient Border) */}
+          <div className="hidden sm:inline-block gradient-border-wrap rounded-full">
+            <div className="bg-background rounded-full px-8 py-4 flex flex-row items-center gap-6">
+              <p className="text-lg md:text-xl font-bold text-center">
                 Você economiza mais de <span className="text-primary font-black">R$ 150/mês</span>
               </p>
-              <Button 
+              <Button
                 onClick={handleCTAClick}
-                className="bg-gradient-gold text-primary-foreground rounded-full font-bold text-sm uppercase tracking-[0.05em] px-6 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300"
+                className="bg-gradient-gold text-primary-foreground rounded-full font-bold text-sm uppercase tracking-[0.05em] px-6 py-4 h-auto hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 whitespace-nowrap"
               >
                 Quero Economizar <ArrowRight className="ml-2 h-4 w-4" />
               </Button>

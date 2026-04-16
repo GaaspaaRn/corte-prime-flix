@@ -39,7 +39,7 @@ const AssinaturaFAQ = () => {
         {/* Header */}
         <div className="text-center mb-16 reveal">
           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-border text-xs font-bold uppercase tracking-[0.15em] text-primary mb-6">
-            ✦ Dúvidas Frequentes
+            Dúvidas Frequentes
           </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Ainda com <span className="text-gold-gradient">dúvidas?</span>

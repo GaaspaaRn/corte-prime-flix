@@ -6,6 +6,7 @@ import SEOHelmet from "@/components/SEOHelmet";
 // Lazy load components below the fold for better performance
 const Gallery = lazy(() => import("@/components/Gallery"));
 const About = lazy(() => import("@/components/About"));
+const AssinaturaProvaSocial = lazy(() => import("@/components/assinatura/AssinaturaProvaSocial"));
 const Footer = lazy(() => import("@/components/Footer"));
 const FloatingButtons = lazy(() => import("@/components/FloatingButtons"));
 
@@ -38,13 +39,14 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background selection:bg-primary/30 selection:text-primary">
+    <div className="min-h-screen bg-background selection:bg-primary/30 selection:text-primary overflow-x-hidden w-full relative">
       <SEOHelmet />
       <Header />
       <Hero />
       <Suspense fallback={<div className="h-20 bg-card/50 animate-pulse" />}>
         <Gallery />
         <About />
+        <AssinaturaProvaSocial />
         <Footer />
         <FloatingButtons />
       </Suspense>

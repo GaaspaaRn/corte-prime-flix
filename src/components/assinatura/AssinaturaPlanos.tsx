@@ -11,15 +11,15 @@ const AssinaturaPlanos = () => {
       icon: Sparkles,
       popular: false,
       features: [
-        'Barba completa ilimitada', 
+        'Barba completa ilimitada',
         'Estilização avançada',
         'Café expresso cortesia',
-        'Produtos premium inclusos', 
-        'Atendimento prioritário', 
+        'Produtos premium inclusos',
+        'Atendimento prioritário',
         'Sem multa · Sem fidelidade'
       ],
       ctaText: 'Assinar Plano Barba'
-    }, 
+    },
     {
       id: 'completo',
       name: 'Premium Completo',
@@ -28,11 +28,11 @@ const AssinaturaPlanos = () => {
       icon: Crown,
       popular: true,
       features: [
-        'Cabelo + Barba ilimitados', 
+        'Cabelo + Barba ilimitados',
         'Lavagem com massagem inclusa',
         'Finalização com pomadas premium',
         'Café expresso cortesia sempre',
-        'Prioridade máxima no agendamento', 
+        'Prioridade máxima no agendamento',
         'Sem multa · Sem fidelidade'
       ],
       ctaText: 'ASSINAR PLANO COMPLETO'
@@ -45,11 +45,11 @@ const AssinaturaPlanos = () => {
       icon: Scissors,
       popular: false,
       features: [
-        'Corte masculino ilimitado', 
+        'Corte masculino ilimitado',
         'Lavagem e finalização',
         'Café expresso cortesia',
-        'Produtos premium inclusos', 
-        'Atendimento prioritário', 
+        'Produtos premium inclusos',
+        'Atendimento prioritário',
         'Sem multa · Sem fidelidade'
       ],
       ctaText: 'Assinar Plano Cabelo'
@@ -70,7 +70,7 @@ const AssinaturaPlanos = () => {
         {/* Header */}
         <div className="text-center mb-20 reveal">
           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-border text-xs font-bold uppercase tracking-[0.15em] text-primary mb-6">
-            ✦ Planos de Assinatura
+            Planos de Assinatura
           </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
             Escolha o seu <span className="text-gold-gradient">nível.</span>
@@ -85,15 +85,14 @@ const AssinaturaPlanos = () => {
           {planos.map((plano, index) => {
             const isPopular = plano.popular;
             const Icon = plano.icon;
-            
+
             return (
-              <div 
-                key={plano.id} 
-                className={`reveal delay-${index + 1} relative rounded-3xl p-8 md:p-10 transition-all duration-500 flex flex-col ${
-                  isPopular 
-                    ? 'bg-card border border-primary/40 shadow-glow lg:scale-[1.03] z-10' 
+              <div
+                key={plano.id}
+                className={`reveal delay-${index + 1} relative rounded-3xl p-8 md:p-10 transition-all duration-500 flex flex-col ${isPopular
+                    ? 'bg-card border border-primary/40 shadow-glow lg:scale-[1.03] z-10'
                     : 'bg-card border border-border hover:border-border/80'
-                }`}
+                  }`}
               >
                 {/* Popular Badge */}
                 {isPopular && (
@@ -132,13 +131,12 @@ const AssinaturaPlanos = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <Button 
-                    onClick={() => handlePlanoClick(plano.id)} 
-                    className={`w-full font-bold text-sm uppercase tracking-[0.05em] py-6 h-auto rounded-full transition-all duration-300 ${
-                      isPopular 
-                        ? 'bg-gradient-gold text-primary-foreground hover:scale-[1.02] active:scale-[0.98] hover:shadow-glow' 
+                  <Button
+                    onClick={() => handlePlanoClick(plano.id)}
+                    className={`w-full font-bold text-sm uppercase tracking-[0.05em] py-6 h-auto rounded-full transition-all duration-300 ${isPopular
+                        ? 'bg-gradient-gold text-primary-foreground hover:scale-[1.02] active:scale-[0.98] hover:shadow-glow'
                         : 'bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:text-primary'
-                    }`} 
+                      }`}
                     variant={isPopular ? 'default' : 'secondary'}
                   >
                     {plano.ctaText}

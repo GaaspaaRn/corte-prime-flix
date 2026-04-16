@@ -66,8 +66,27 @@ const Hero = () => {
           </Button>
         </div>
 
+        {/* Trust Row */}
+        <div className="reveal delay-4 flex items-center justify-center gap-6 mt-16 text-sm text-muted-foreground">
+          <div className="flex -space-x-2">
+            {['airtonferreira.png', 'frmultimarcas.png', 'fabiomanske.png', 'leandromichalak.png'].map((img, i) => (
+              <div key={i} className="w-8 h-8 rounded-full bg-secondary border-2 border-background flex items-center justify-center overflow-hidden shrink-0">
+                <img src={`/images/testimonials/${img}`} alt="Avaliação" className="w-full h-full object-cover" />
+              </div>
+            ))}
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1">
+              <span className="text-primary">★</span>
+              <span className="font-semibold text-foreground">5.0</span>
+            </div>
+            <span className="text-border">|</span>
+            <span>Google Avaliações</span>
+          </div>
+        </div>
+
         {/* Location */}
-        <div className="reveal delay-4 flex items-center gap-2 mt-16 text-sm text-white/70">
+        <div className="reveal flex items-center gap-2 mt-8 text-sm text-white/70">
           <MapPin className="w-4 h-4 text-primary" />
           <span>Rua Alferes Schimidt, 78 · Joinville, SC</span>
         </div>

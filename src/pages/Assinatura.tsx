@@ -39,7 +39,7 @@ const Assinatura = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background selection:bg-primary/30 selection:text-primary">
+    <div className="min-h-screen bg-background selection:bg-primary/30 selection:text-primary overflow-x-hidden w-full relative">
       <SEOHelmet 
         title="Clube de Assinatura Premium | Barbearia Premium Joinville"
         description="Assinaturas a partir de R$79,90! Cabelo e barba ilimitados, café expresso cortesia, e muito mais na melhor barbearia de Joinville."

@@ -40,7 +40,7 @@ const AssinaturaBeneficios = () => {
         {/* Header */}
         <div className="text-center mb-20 reveal">
           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-border text-xs font-bold uppercase tracking-[0.15em] text-primary mb-6">
-            ✦ Diferenciais Exclusivos
+            Diferenciais Exclusivos
           </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
             Por que escolher o <span className="text-gold-gradient">clube Premium?</span>
@@ -55,8 +55,8 @@ const AssinaturaBeneficios = () => {
           {beneficios.map((beneficio, index) => {
             const Icon = beneficio.icon;
             return (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`reveal delay-${Math.min(index + 1, 5)} group p-8 rounded-3xl border border-border bg-card hover:border-primary/40 transition-all duration-300`}
               >
                 <div className="mb-5">
