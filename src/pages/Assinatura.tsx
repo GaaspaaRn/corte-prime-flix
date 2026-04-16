@@ -50,8 +50,8 @@ const Assinatura = () => {
       <main>
         <AssinaturaHero />
         <AssinaturaAutoridade />
-        <AssinaturaBeneficios />
         <AssinaturaComparativo />
+        <AssinaturaBeneficios />
         <AssinaturaPlanos />
         <AssinaturaProvaSocial />
         <AssinaturaFAQ />
