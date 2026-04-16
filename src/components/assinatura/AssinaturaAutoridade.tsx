@@ -45,7 +45,7 @@ const AssinaturaAutoridade = () => {
   const stats = [
     { icon: Star, value: 5, suffix: ".0", label: "Nota no Google" },
     { icon: Users, value: 100, suffix: "+", label: "Assinantes Ativos" },
-    { icon: Trophy, value: 33, suffix: "+", label: "Avaliações 5★" },
+    { icon: Trophy, value: 65, suffix: "+", label: "Avaliações 5★" },
     { icon: Calendar, value: 5, suffix: "+", label: "Anos de Tradição" },
   ];
 
@@ -56,7 +56,7 @@ const AssinaturaAutoridade = () => {
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             const count = useCountUp(stat.value, 2000, isVisible);
-            
+
             return (
               <div key={index} className="flex flex-col items-center text-center space-y-2">
                 <Icon className="h-5 w-5 text-primary mb-1" />
