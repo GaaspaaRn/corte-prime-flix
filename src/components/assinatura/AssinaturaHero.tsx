@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Star, Users } from "lucide-react";
+import * as pixel from "@/lib/pixel";
 
 const AssinaturaHero = () => {
   const handleCTAClick = () => {
@@ -9,6 +10,12 @@ const AssinaturaHero = () => {
   };
 
   const handleWhatsAppClick = () => {
+    // Track Pixel Event
+    pixel.event('Contact', {
+      content_name: 'Dúvida Assinatura Hero',
+      content_category: 'Assinatura'
+    });
+
     window.open('https://wa.me/5547988984877?text=Olá! Gostaria de saber mais sobre a assinatura premium!', '_blank');
   };
 

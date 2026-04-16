@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, Star, Users } from "lucide-react";
+import * as pixel from "@/lib/pixel";
 
 const AssinaturaPlanos = () => {
   const planos = [
@@ -8,6 +9,7 @@ const AssinaturaPlanos = () => {
       name: 'Premium Barba',
       subtitle: 'BARBA ILIMITADA',
       price: '79,90',
+      numericPrice: 79.90,
       popular: false,
       features: [
         'Barba completa ilimitada',
@@ -24,6 +26,7 @@ const AssinaturaPlanos = () => {
       name: 'Premium Completo',
       subtitle: 'CABELO + BARBA ILIMITADO',
       price: '149,90',
+      numericPrice: 149.90,
       popular: true,
       features: [
         'Cabelo + Barba ilimitados',
@@ -40,6 +43,7 @@ const AssinaturaPlanos = () => {
       name: 'Premium Cabelo',
       subtitle: 'CABELO ILIMITADO',
       price: '89,90',
+      numericPrice: 89.90,
       popular: false,
       features: [
         'Corte masculino ilimitado',
@@ -54,10 +58,20 @@ const AssinaturaPlanos = () => {
   ];
 
   const handlePlanoClick = (planoId: string) => {
+    const plano = planos.find(p => p.id === planoId);
     let message = 'Olá! Gostaria de assinar o plano ';
     if (planoId === 'completo') message += 'Premium Completo (R$149,90)';
     if (planoId === 'cabelo') message += 'Premium Cabelo (R$89,90)';
     if (planoId === 'barba') message += 'Premium Barba (R$79,90)';
+
+    // Track Pixel Event
+    pixel.event('Lead', {
+      content_name: plano?.name,
+      content_category: 'Assinatura',
+      value: plano?.numericPrice,
+      currency: 'BRL'
+    });
+
     window.open(`https://wa.me/5547988984877?text=${encodeURIComponent(message)}`, '_blank');
   };
 

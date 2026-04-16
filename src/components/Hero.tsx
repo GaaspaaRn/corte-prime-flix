@@ -1,7 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Star, Users } from "lucide-react";
+import * as pixel from "@/lib/pixel";
 
 const Hero = () => {
+  const handleScheduleClick = () => {
+    // Track Pixel Event
+    pixel.event('Contact', {
+      content_name: 'Agendamento via Hero',
+      content_category: 'Conversão'
+    });
+    
+    window.open(`https://wa.me/5547988984877?text=${encodeURIComponent('Olá! Gostaria de agendar um horário na Barbearia Premium.')}`, '_blank');
+  };
+
   return (
     <section id="home" className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -50,7 +61,7 @@ const Hero = () => {
           <Button
             size="lg"
             className="bg-gradient-gold text-primary-foreground font-bold text-[15px] uppercase tracking-[0.05em] px-10 py-6 h-auto rounded-full hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 shadow-none hover:shadow-glow"
-            onClick={() => window.open(`https://wa.me/5547988984877?text=${encodeURIComponent('Olá! Gostaria de agendar um horário na Barbearia Premium.')}`, '_blank')}
+            onClick={handleScheduleClick}
           >
             Agendar Agora
           </Button>
