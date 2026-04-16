@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Crown, Scissors, Sparkles } from "lucide-react";
+import { Check, Star, Users } from "lucide-react";
 
 const AssinaturaPlanos = () => {
   const planos = [
@@ -8,7 +8,6 @@ const AssinaturaPlanos = () => {
       name: 'Premium Barba',
       subtitle: 'BARBA ILIMITADA',
       price: '79,90',
-      icon: Sparkles,
       popular: false,
       features: [
         'Barba completa ilimitada',
@@ -25,7 +24,6 @@ const AssinaturaPlanos = () => {
       name: 'Premium Completo',
       subtitle: 'CABELO + BARBA ILIMITADO',
       price: '149,90',
-      icon: Crown,
       popular: true,
       features: [
         'Cabelo + Barba ilimitados',
@@ -42,7 +40,6 @@ const AssinaturaPlanos = () => {
       name: 'Premium Cabelo',
       subtitle: 'CABELO ILIMITADO',
       price: '89,90',
-      icon: Scissors,
       popular: false,
       features: [
         'Corte masculino ilimitado',
@@ -68,14 +65,14 @@ const AssinaturaPlanos = () => {
     <section id="planos" className="py-32 px-6 bg-background relative">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-20 reveal">
+        <div className="text-center mb-16 reveal flex flex-col items-center">
           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-border text-xs font-bold uppercase tracking-[0.15em] text-primary mb-6">
             Planos de Assinatura
           </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
             Escolha o seu <span className="text-gold-gradient">nível.</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-lg mx-auto">
+          <p className="text-lg text-muted-foreground max-w-lg mx-auto mb-10">
             Sem fidelidade. Cancele quando quiser. Sem multa.
           </p>
         </div>
@@ -84,7 +81,6 @@ const AssinaturaPlanos = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
           {planos.map((plano, index) => {
             const isPopular = plano.popular;
-            const Icon = plano.icon;
 
             return (
               <div
@@ -104,11 +100,10 @@ const AssinaturaPlanos = () => {
                 )}
 
                 <div className="flex flex-col flex-grow">
-                  {/* Icon & Name */}
-                  <div className="mb-8 mt-2">
-                    <Icon className={`h-6 w-6 mb-4 ${isPopular ? 'text-primary' : 'text-muted-foreground'}`} strokeWidth={1.5} />
-                    <h3 className="text-xl font-bold text-foreground">{plano.name}</h3>
-                    <p className="text-xs font-bold text-primary uppercase tracking-[0.15em] mt-1">{plano.subtitle}</p>
+                  {/* Name */}
+                  <div className="mb-8 mt-4">
+                    <h3 className="text-2xl font-black tracking-tight text-foreground">{plano.name}</h3>
+                    <p className="text-xs font-bold text-primary uppercase tracking-[0.15em] mt-2">{plano.subtitle}</p>
                   </div>
 
                   {/* Price */}
@@ -145,6 +140,30 @@ const AssinaturaPlanos = () => {
               </div>
             )
           })}
+        </div>
+
+        {/* Social Proof After Plans */}
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 reveal">
+          <div className="flex items-center gap-6 bg-card/60 border border-border/50 px-6 py-3 rounded-full backdrop-blur-md shadow-[0_0_40px_-15px_rgba(212,175,55,0.2)]">
+            <div className="flex -space-x-2">
+              {['airtonferreira.png', 'frmultimarcas.png', 'fabiomanske.png', 'leandromichalak.png'].map((img, i) => (
+                <div key={i} className="w-8 h-8 rounded-full bg-secondary border-2 border-background flex items-center justify-center overflow-hidden shrink-0">
+                  <img src={`/images/testimonials/${img}`} alt="Cliente Premium" className="w-full h-full object-cover" />
+                </div>
+              ))}
+            </div>
+            <div className="flex items-center gap-3 text-sm text-muted-foreground">
+              <div className="flex items-center gap-1">
+                <Star className="h-3.5 w-3.5 text-primary fill-primary" />
+                <span className="font-semibold text-foreground">5.0</span>
+              </div>
+              <span className="text-border">|</span>
+              <div className="flex items-center gap-1">
+                <Users className="h-3.5 w-3.5 text-primary" />
+                <span>+100 assinantes</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -58,7 +58,7 @@ const AssinaturaHero = () => {
             size="lg"
             className="w-full sm:w-auto bg-gradient-gold text-primary-foreground font-bold text-[15px] uppercase tracking-[0.05em] px-10 py-6 h-auto rounded-full hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 shadow-none hover:shadow-glow"
           >
-            VER PLANOS
+            VER BENEFÍCIOS DO CLUBE
           </Button>
 
           <Button
@@ -94,6 +94,7 @@ const AssinaturaHero = () => {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
