@@ -21,7 +21,7 @@ const AssinaturaFAQ = () => {
     },
     {
       question: "O café expresso é liberado mesmo?",
-      answer: "Sim! Em todas as suas visitas, garantimos um café expresso como cortesia da casa."
+      answer: "Sim! Em todas as suas visitas, garantimos o café expresso como cortesia da casa."
     },
     {
       question: "Qual plano é o mais indicado?",
