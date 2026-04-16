@@ -72,7 +72,7 @@ const AssinaturaComoFunciona = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-sm font-black uppercase tracking-[0.2em] text-primary mb-3 transition-colors duration-300">
+                <h3 className="text-sm font-black uppercase tracking-[0.2em] text-foreground mb-3 transition-colors duration-300">
                   {passo.titulo}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed max-w-[260px]">
