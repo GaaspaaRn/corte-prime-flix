@@ -11,6 +11,7 @@ import AssinaturaAutoridade from "@/components/assinatura/AssinaturaAutoridade";
 import AssinaturaProvaSocial from "@/components/assinatura/AssinaturaProvaSocial";
 import AssinaturaFAQ from "@/components/assinatura/AssinaturaFAQ";
 import AssinaturaCTAFinal from "@/components/assinatura/AssinaturaCTAFinal";
+import AssinaturaComoFunciona from "@/components/assinatura/AssinaturaComoFunciona";
 
 const Assinatura = () => {
   useEffect(() => {
@@ -52,6 +53,7 @@ const Assinatura = () => {
         <AssinaturaAutoridade />
         <AssinaturaComparativo />
         <AssinaturaBeneficios />
+        <AssinaturaComoFunciona />
         <AssinaturaPlanos />
         <AssinaturaProvaSocial />
         <AssinaturaFAQ />
