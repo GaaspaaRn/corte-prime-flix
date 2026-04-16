@@ -42,8 +42,8 @@ const AssinaturaHero = () => {
 
         {/* Subtitle */}
         <p className="reveal delay-1 text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto mb-12 leading-relaxed">
-          O primeiro clube de assinatura <span className="text-foreground font-semibold">ilimitado</span> de Joinville.
-          Cabelo, barba e experiência premium — sem limites.
+          O mais <span className="text-foreground font-semibold">exclusivo</span> clube de <span className="text-foreground font-semibold">assinatura</span> em Joinville.
+          Cabelo, barba, limpeza e <span className="text-foreground font-semibold">experiência premium</span> — <span className="text-foreground font-semibold">sem limites.</span>
         </p>
 
         {/* Price Anchor */}
