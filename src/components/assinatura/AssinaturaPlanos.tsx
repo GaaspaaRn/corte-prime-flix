@@ -23,7 +23,7 @@ const AssinaturaPlanos = () => {
     },
     {
       id: 'completo',
-      name: 'Premium Completo',
+      name: 'Premium VIP',
       subtitle: 'CABELO + BARBA ILIMITADO',
       price: '149,90',
       numericPrice: 149.90,
@@ -36,7 +36,7 @@ const AssinaturaPlanos = () => {
         'Prioridade máxima no agendamento',
         'Sem multa · Sem fidelidade'
       ],
-      ctaText: 'ASSINAR PLANO COMPLETO'
+      ctaText: 'ASSINAR PLANO VIP'
     },
     {
       id: 'cabelo',

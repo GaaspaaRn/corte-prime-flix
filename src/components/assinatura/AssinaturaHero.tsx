@@ -42,9 +42,9 @@ const AssinaturaHero = () => {
 
         {/* Main Headline */}
         <h1 className="reveal text-5xl sm:text-7xl lg:text-[5.5rem] font-black tracking-tight leading-[0.95] mb-8">
-          <span className="text-foreground">SEMPRE</span>
+          <span className="text-foreground">CORTE SEMPRE</span>
           <br />
-          <span className="text-gold-gradient">IMPECÁVEL.</span>
+          <span className="text-gold-gradient">PAGUE 1 VEZ.</span>
         </h1>
 
         {/* Subtitle */}

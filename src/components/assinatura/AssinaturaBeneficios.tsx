@@ -5,12 +5,12 @@ const AssinaturaBeneficios = () => {
     {
       icon: Infinity,
       title: "Acesso Ilimitado",
-      description: "Corte e barba toda semana. Sem limites, sem restrições."
+      description: "Corte e barba todo dia. Sem limites, sem restrições."
     },
     {
       icon: Coffee,
       title: "Café Expresso Cortesia",
-      description: "Um café expresso quentinho por nossa conta em toda visita."
+      description: "Café expresso quentinho por nossa conta em toda visita."
     },
     {
       icon: Crown,
@@ -30,7 +30,7 @@ const AssinaturaBeneficios = () => {
     {
       icon: MapPin,
       title: "Localização Prime",
-      description: "Coração do Comasa, fácil acesso e estacionamento."
+      description: "Rua do Condor no bairro Comasa, fácil acesso e estacionamento."
     }
   ];
 
