@@ -86,7 +86,7 @@ const AssinaturaProvaSocial = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground text-sm">{depoimento.nome}</p>
-                  <p className="text-xs text-primary">Cliente Premium</p>
+                  <p className="text-xs text-primary">Assinante Premium</p>
                 </div>
               </div>
             </div>
