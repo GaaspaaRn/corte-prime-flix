@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Play, Image as ImageIcon, Calendar, Clock, Star, Check } from "lucide-react";
+import { Play, Image as ImageIcon, Calendar, Clock, Star, Check, ArrowRight } from "lucide-react";
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("cortes");
@@ -31,7 +31,7 @@ const Gallery = () => {
     }, 50);
     return () => { clearTimeout(timer); observer.disconnect(); };
   }, [activeCategory]);
-  
+
   const categories = [
     { id: "cortes", label: "Cortes" },
     { id: "barbas", label: "Barbas" },
@@ -120,53 +120,57 @@ const Gallery = () => {
     <section id="gallery" className="py-32 px-6 bg-background">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-20 reveal">
+        <div className="text-center mb-12 reveal">
           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-border text-xs font-bold uppercase tracking-[0.15em] text-primary mb-6">
-            ✦ Nosso Trabalho
+            Nosso Trabalho
           </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
             Nossos <span className="text-gold-gradient">Serviços</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-lg mx-auto mb-12">
-            Descubra nossos serviços premium e agende seu horário
+          <p className="text-lg text-muted-foreground max-w-lg mx-auto mb-6">
+            Descubra nossos serviços premium
           </p>
 
           {/* Category Filter — Pill Buttons */}
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex gap-3 overflow-x-auto no-scrollbar px-6">
             {categories.map(category => (
               <button
                 key={category.id}
                 data-category={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
-                  activeCategory === category.id
-                    ? 'bg-gradient-gold text-primary-foreground'
-                    : 'bg-transparent border border-border text-muted-foreground hover:border-primary hover:text-primary'
-                }`}
+                className={`flex-shrink-0 whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${activeCategory === category.id
+                  ? 'bg-gradient-gold text-primary-foreground'
+                  : 'bg-transparent border border-border text-muted-foreground hover:border-primary hover:text-primary'
+                  }`}
               >
                 {category.label}
               </button>
             ))}
+          </div>
+
+          {/* Mobile Scroll Hint */}
+          <div className="flex md:hidden items-center justify-end pr-6 mt-3 text-white/50 text-xs font-medium animate-pulse">
+            <span>Deslize</span>
+            <ArrowRight className="w-3 h-3 ml-1" />
           </div>
         </div>
 
         {/* Gallery Grid */}
         <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {currentItems.map((item, index) => (
-            <div 
-              key={item.id} 
-              className={`reveal delay-${Math.min(index + 1, 5)} group relative overflow-hidden rounded-3xl border border-border bg-card cursor-pointer transition-all duration-500 hover:border-primary/30 ${
-                index === 0 ? 'md:col-span-2 md:row-span-2' : ''
-              }`}
+            <div
+              key={item.id}
+              className={`reveal delay-${Math.min(index + 1, 5)} group relative overflow-hidden rounded-3xl border border-border bg-card cursor-pointer transition-all duration-500 hover:border-primary/30 ${index === 0 ? 'md:col-span-2 md:row-span-2' : ''
+                }`}
               onClick={() => setSelectedService(item)}
             >
               <div className={`relative ${index === 0 ? 'h-96 md:h-full' : 'h-72'}`}>
                 {item.image ? (
-                  <img 
-                    src={item.image} 
-                    alt={`${item.title} - Barbearia Premium Joinville`} 
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" 
-                    loading="lazy" 
+                  <img
+                    src={item.image}
+                    alt={`${item.title} - Barbearia Premium Joinville`}
+                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
                   />
                 ) : (
                   <div className="w-full h-full flex flex-col items-center justify-center bg-card">
@@ -252,9 +256,9 @@ const Gallery = () => {
                   )}
 
                   {/* CTA */}
-                  <Button 
-                    size="lg" 
-                    className="w-full bg-gradient-gold text-primary-foreground font-bold text-sm uppercase tracking-[0.05em] py-6 h-auto rounded-full hover:scale-[1.01] transition-all duration-300" 
+                  <Button
+                    size="lg"
+                    className="w-full bg-gradient-gold text-primary-foreground font-bold text-sm uppercase tracking-[0.05em] py-6 h-auto rounded-full hover:scale-[1.01] transition-all duration-300"
                     onClick={() => window.open(`https://wa.me/5547988984877?text=${encodeURIComponent(`Olá! Gostaria de agendar o serviço de ${selectedService.title}.`)}`, '_blank')}
                   >
                     <Calendar className="w-4 h-4 mr-2" />
