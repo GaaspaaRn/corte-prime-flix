@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MapPin } from "lucide-react";
+import { MapPin, Star, Users } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -71,17 +71,21 @@ const Hero = () => {
           <div className="flex -space-x-2">
             {['airtonferreira.png', 'frmultimarcas.png', 'fabiomanske.png', 'leandromichalak.png'].map((img, i) => (
               <div key={i} className="w-8 h-8 rounded-full bg-secondary border-2 border-background flex items-center justify-center overflow-hidden shrink-0">
-                <img src={`/images/testimonials/${img}`} alt="Avaliação" className="w-full h-full object-cover" />
+                <img src={`/images/testimonials/${img}`} alt="Cliente Premium" className="w-full h-full object-cover" />
               </div>
             ))}
           </div>
-          <div className="flex items-center gap-3">
+
+          <div className="flex items-center gap-3 text-sm text-muted-foreground">
             <div className="flex items-center gap-1">
-              <span className="text-primary">★</span>
+              <Star className="h-3.5 w-3.5 text-primary fill-primary" />
               <span className="font-semibold text-foreground">5.0</span>
             </div>
             <span className="text-border">|</span>
-            <span>Google Avaliações</span>
+            <div className="flex items-center gap-1">
+              <Users className="h-3.5 w-3.5 text-primary" />
+              <span className="font-semibold text-foreground">+100 assinantes</span>
+            </div>
           </div>
         </div>
 

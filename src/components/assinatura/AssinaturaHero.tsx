@@ -90,7 +90,7 @@ const AssinaturaHero = () => {
             <span className="text-border">|</span>
             <div className="flex items-center gap-1">
               <Users className="h-3.5 w-3.5 text-primary" />
-              <span>+100 assinantes</span>
+              <span className="font-semibold text-foreground">+100 assinantes</span>
             </div>
           </div>
         </div>
