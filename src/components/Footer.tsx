@@ -47,8 +47,9 @@ const Footer = () => {
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                 <div>
-                  <p>Rua Alferes Schmidt 78</p>
+                  <p>Rua Alferes Schmidt, 78</p>
                   <p>Comasa - Joinville, SC</p>
+                  <p>CEP: 89228-300</p>
                 </div>
               </div>
               <div className="flex items-center gap-2.5">

@@ -41,7 +41,7 @@ const About = () => {
           <div>
             <h3 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Nossa História</h3>
             <div className="space-y-5 text-muted-foreground leading-relaxed">
-              <p>A <strong className="text-foreground">Barbearia Premium Joinville</strong> nasceu do sonho de criar um espaço onde o cuidado masculino fosse tratado como arte. Localizada na <strong className="text-foreground">Rua Alferes Schimidt, 78, no Comasa</strong>, nos dedicamos a oferecer não apenas cortes de cabelo, mas uma experiência completa de bem-estar e estilo.</p>
+              <p>A <strong className="text-foreground">Barbearia Premium Joinville</strong> nasceu do sonho de criar um espaço onde o cuidado masculino fosse tratado como arte. Localizada na <strong className="text-foreground">Rua Alferes Schmidt, 78, no Comasa</strong>, nos dedicamos a oferecer não apenas cortes de cabelo, mas uma experiência completa de bem-estar e estilo.</p>
               <p>Nosso fundador após anos de experiência, reuniu uma equipe profissional que compartilha a mesma visão: cada cliente merece se sentir especial e confiante.</p>
               <p>Já somos <strong className="text-foreground">referência em Joinville</strong>, especialmente na região do Comasa, atendendo diversos públicos e até artistas, sempre mantendo o mesmo padrão de excelência.</p>
             </div>
@@ -107,7 +107,7 @@ const About = () => {
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localização da Barbearia Premium - Rua Alferes Schimidt 78, Comasa, Joinville SC"
+                title="Localização da Barbearia Premium - Rua Alferes Schmidt 78, Comasa, Joinville SC"
               />
             </div>
 

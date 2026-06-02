@@ -7,19 +7,19 @@ const Contact = () => {
   const contactInfo = [{
     icon: MapPin,
     title: "Endereço",
-    info: "Rua Alferes Schimidt, 78\nComasa - Joinville, SC\nCEP: 89202-070"
+    info: "Rua Alferes Schmidt, 78\nComasa - Joinville, SC\nCEP: 89228-300"
   }, {
     icon: Phone,
     title: "Telefone",
-    info: "(47) 98898-4877\n(47) 3422-1234"
+    info: "(47) 98898-4877"
   }, {
     icon: Clock,
     title: "Horário",
-    info: "Segunda a Sexta: 08:00 - 20:00\nSábado: 08:00 - 18:00\nDomingo: 09:00 - 15:00"
+    info: "Segunda: 14:00 - 20:00\nTerça a Sexta: 09:00 - 20:00\nSábado: 08:00 - 16:00\nDomingo: Fechado"
   }, {
     icon: Mail,
     title: "E-mail",
-    info: "contato@barbeariapm.com\nagendamento@barbeariapm.com"
+    info: "contato@barbeariapm.com"
   }];
   const socialLinks = [{
     icon: Instagram,

@@ -79,9 +79,14 @@ const Header = () => {
                     <Phone className="w-4 h-4 text-primary" />
                     <span>(47) 98898-4877</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-primary" />
-                    <span>09:00 - 20:00</span>
+                  <div className="flex items-start gap-2">
+                    <Clock className="w-4 h-4 text-primary mt-0.5" />
+                    <div className="flex flex-col text-xs space-y-0.5">
+                      <span className="font-semibold text-foreground">Horários de Funcionamento:</span>
+                      <span>Segunda: 14:00 - 20:00</span>
+                      <span>Terça a Sexta: 09:00 - 20:00</span>
+                      <span>Sábado: 08:00 - 16:00</span>
+                    </div>
                   </div>
                 </div>
               </div>

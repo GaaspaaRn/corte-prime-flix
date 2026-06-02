@@ -25,4 +25,7 @@ dist-ssr
 
 # AI Agents & Skills
 .agents/
+.agent/
+BarbeariaPremiumJoinville.md
+barbeariapremiumjoinville.md
 skills-lock.json

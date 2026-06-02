@@ -44,44 +44,44 @@ const Gallery = () => {
       {
         id: 1, type: "image", title: "Corte Clássico",
         description: "Fade baixo com degradê profissional",
-        price: "R$ 45", duration: "45 min", match: "99%",
+        price: "R$ 40", duration: "30 min", match: "99%",
         image: "/images/gallery/cortes/corte-classico.webp",
-        details: "Corte tradicional com técnicas modernas, ideal para o dia a dia profissional. Inclui lavagem, corte personalizado e finalização com produtos premium.",
+        details: "Corte tradicional com técnicas modernas, ideal para o dia a dia profissional. Inclui lavagem, corte personalizado e finalização com produtos premium de alta qualidade.",
         features: ["Lavagem premium", "Corte personalizado", "Finalização", "Styling"]
       },
       {
         id: 2, type: "image", title: "Corte Moderno",
         description: "Undercut estilizado e atual",
-        price: "R$ 60", duration: "50 min", match: "97%",
+        price: "R$ 40", duration: "30 min", match: "97%",
         image: "/images/gallery/cortes/corte-moderno.webp",
-        details: "Corte moderno com técnicas atuais, perfeito para quem busca um visual diferenciado e estiloso.",
+        details: "Corte moderno com técnicas atuais (degradê, fade, undercut), perfeito para quem busca um visual diferenciado, estiloso e de fácil manutenção.",
         features: ["Consulta de estilo", "Lavagem premium", "Corte moderno", "Finalização especial"]
       },
       {
-        id: 3, type: "image", title: "Corte VIP",
+        id: 3, type: "image", title: "Cabelo e Barba",
         description: "Experiência completa premium",
-        price: "R$ 120", duration: "90 min", match: "95%",
+        price: "R$ 70", duration: "60 min", match: "98%",
         image: "/images/gallery/cortes/corte-vip.webp",
-        details: "Experiência exclusiva com atendimento personalizado, bebida inclusa e os melhores produtos. Barbearia Premium Joinville - Comasa.",
-        features: ["Atendimento VIP", "Bebida inclusa", "Produtos premium", "Massagem relaxante", "Styling completo"]
+        details: "Experiência exclusiva combinando corte de cabelo personalizado e barba completa com toalha quente e massagem. Barbearia Premium Joinville - Comasa.",
+        features: ["Atendimento VIP", "Cerveja gelada ou café cortesia", "Produtos de alta qualidade", "Corte + Barba completa", "Massagem e toalha quente"]
       }
     ],
     barbas: [
       {
-        id: 7, type: "image", title: "Barba Completa",
+        id: 7, type: "image", title: "Barba",
         description: "Modelagem e aparar profissional",
         price: "R$ 35", duration: "30 min", match: "98%",
         image: "/images/gallery/barbas/barba-completa.webp",
-        details: "Serviço completo de barba com modelagem personalizada, aparar e hidratação.",
-        features: ["Limpeza", "Modelagem", "Aparar", "Hidratação"]
+        details: "Serviço completo de barba com toalha quente, modelagem personalizada, alinhamento de fios e hidratação com óleos premium.",
+        features: ["Limpeza de pele facial", "Modelagem e desenho", "Aparar na tesoura/máquina", "Hidratação pós-barba"]
       },
       {
-        id: 8, type: "image", title: "Degradê na Barba",
-        description: "Técnica avançada",
-        price: "R$ 45", duration: "40 min", match: "96%",
+        id: 8, type: "image", title: "Barba na Máquina",
+        description: "Corte de barba rápido na máquina",
+        price: "R$ 25", duration: "30 min", match: "96%",
         image: "/images/gallery/barbas/degrade-barba.webp",
-        details: "Técnica especializada de degradê na barba para um visual moderno e sofisticado.",
-        features: ["Técnica avançada", "Degradê profissional", "Finalização premium"]
+        details: "Barba aparada na máquina com acabamento limpo e uniforme. Opção prática e rápida para manter a barba sempre alinhada.",
+        features: ["Aparar na máquina", "Acabamento uniforme", "Finalização com balm premium"]
       }
     ],
     ambiente: [

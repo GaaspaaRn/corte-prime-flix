@@ -6,7 +6,7 @@ const AssinaturaPlanos = () => {
   const planos = [
     {
       id: 'barba',
-      name: 'Premium Barba',
+      name: 'Plano Barba',
       subtitle: 'BARBA ILIMITADA',
       price: '79,90',
       numericPrice: 79.90,
@@ -23,7 +23,7 @@ const AssinaturaPlanos = () => {
     },
     {
       id: 'completo',
-      name: 'Premium VIP',
+      name: 'Plano Cabelo e Barba',
       subtitle: 'CABELO + BARBA ILIMITADO',
       price: '149,90',
       numericPrice: 149.90,
@@ -40,7 +40,7 @@ const AssinaturaPlanos = () => {
     },
     {
       id: 'cabelo',
-      name: 'Premium Cabelo',
+      name: 'Plano Cabelo',
       subtitle: 'CABELO ILIMITADO',
       price: '89,90',
       numericPrice: 89.90,
@@ -59,10 +59,10 @@ const AssinaturaPlanos = () => {
 
   const handlePlanoClick = (planoId: string) => {
     const plano = planos.find(p => p.id === planoId);
-    let message = 'Olá! Gostaria de assinar o plano ';
-    if (planoId === 'completo') message += 'Premium Completo (R$149,90)';
-    if (planoId === 'cabelo') message += 'Premium Cabelo (R$89,90)';
-    if (planoId === 'barba') message += 'Premium Barba (R$79,90)';
+    let message = 'Olá! Gostaria de assinar o ';
+    if (planoId === 'completo') message += 'Plano Premium Cabelo e Barba (R$149,90)';
+    if (planoId === 'cabelo') message += 'Plano Premium Cabelo (R$89,90)';
+    if (planoId === 'barba') message += 'Plano Premium Barba (R$79,90)';
 
     // Track Pixel Event
     pixel.event('Lead', {
@@ -100,8 +100,8 @@ const AssinaturaPlanos = () => {
               <div
                 key={plano.id}
                 className={`reveal delay-${index + 1} relative rounded-3xl p-8 md:p-10 transition-all duration-500 flex flex-col ${isPopular
-                    ? 'bg-card border border-primary/40 shadow-glow lg:scale-[1.03] z-10'
-                    : 'bg-card border border-border hover:border-border/80'
+                  ? 'bg-card border border-primary/40 shadow-glow lg:scale-[1.03] z-10'
+                  : 'bg-card border border-border hover:border-border/80'
                   }`}
               >
                 {/* Popular Badge */}
@@ -143,8 +143,8 @@ const AssinaturaPlanos = () => {
                   <Button
                     onClick={() => handlePlanoClick(plano.id)}
                     className={`w-full font-bold text-sm uppercase tracking-[0.05em] py-6 h-auto rounded-full transition-all duration-300 ${isPopular
-                        ? 'bg-gradient-gold text-primary-foreground hover:scale-[1.02] active:scale-[0.98] hover:shadow-glow'
-                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:text-primary'
+                      ? 'bg-gradient-gold text-primary-foreground hover:scale-[1.02] active:scale-[0.98] hover:shadow-glow'
+                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:text-primary'
                       }`}
                     variant={isPopular ? 'default' : 'secondary'}
                   >

@@ -25,11 +25,11 @@ const AssinaturaFAQ = () => {
     },
     {
       question: "Qual plano é o mais indicado?",
-      answer: "O Premium Completo (R$ 149,90) é perfeito para quem faz cabelo e barba. Fazendo as contas, se você for 2+ vezes no mês, o plano já se paga."
+      answer: "O Plano Premium Cabelo e Barba (R$ 149,90) é perfeito para quem faz cabelo e barba. Fazendo as contas, se você for 2+ vezes no mês, o plano já se paga."
     },
     {
       question: "Quais são as opções mais acessíveis?",
-      answer: "Temos o Premium Cabelo por R$ 89,90 e o Premium Barba por R$ 79,90. Ambos com acesso ilimitado ao serviço escolhido."
+      answer: "Temos o Plano Premium Cabelo por R$ 89,90 e o Plano Premium Barba por R$ 79,90. Ambos com acesso ilimitado ao serviço escolhido."
     }
   ];
 

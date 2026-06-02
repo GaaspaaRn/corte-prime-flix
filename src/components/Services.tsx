@@ -6,36 +6,36 @@ const Services = () => {
   const services = [
     {
       icon: Scissors,
-      title: "Corte Clássico",
-      description: "Cortes tradicionais com técnicas modernas e acabamento perfeito",
-      price: "R$ 45",
-      duration: "45 min",
-      features: ["Lavagem", "Corte", "Finalização", "Styling"]
+      title: "Corte",
+      description: "Cortes tradicionais ou modernos (fade, undercut) com acabamento impecável",
+      price: "R$ 40",
+      duration: "30 min",
+      features: ["Lavagem", "Corte personalizado", "Finalização", "Styling"]
     },
     {
       icon: Crown,
-      title: "Corte Premium",
-      description: "Experiência completa com corte personalizado e tratamentos especiais",
-      price: "R$ 80",
+      title: "Cabelo e Barba",
+      description: "Experiência completa combinando corte personalizado e barba completa",
+      price: "R$ 70",
       duration: "60 min",
-      features: ["Consulta", "Lavagem premium", "Corte personalizado", "Massagem", "Styling premium"],
+      features: ["Corte de cabelo", "Barba completa", "Toalha quente", "Massagem facial", "Finalização premium"],
       featured: true
     },
     {
       icon: Brush,
-      title: "Barba Completa",
-      description: "Aparar, modelar e finalizar sua barba com produtos premium",
+      title: "Barba",
+      description: "Modelagem, aparar e finalizar sua barba com toalha quente e balm premium",
       price: "R$ 35",
       duration: "30 min",
-      features: ["Limpeza", "Aparar", "Modelagem", "Hidratação"]
+      features: ["Limpeza facial", "Aparar e modelar", "Toalha quente", "Hidratação pós-barba"]
     },
     {
       icon: Zap,
-      title: "Combo Completo",
-      description: "Corte + Barba + Tratamentos especiais para um visual impecável",
-      price: "R$ 120",
-      duration: "90 min",
-      features: ["Corte premium", "Barba completa", "Sobrancelha", "Massagem", "Produtos premium"]
+      title: "Selagem Capilar",
+      description: "Tratamento de redução de volume e alinhamento dos fios",
+      price: "A partir de R$ 89,90",
+      duration: "60 min",
+      features: ["Lavagem profunda", "Aplicação de selagem", "Escova e selamento", "Finalização"]
     }
   ];
 

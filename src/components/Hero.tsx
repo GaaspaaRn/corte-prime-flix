@@ -103,7 +103,7 @@ const Hero = () => {
         {/* Location */}
         <div className="reveal flex items-center gap-2 mt-8 text-sm text-white/70">
           <MapPin className="w-4 h-4 text-primary" />
-          <span>Rua Alferes Schimidt, 78 · Joinville, SC</span>
+          <span>Rua Alferes Schmidt, 78 · Joinville, SC</span>
         </div>
       </div>
     </section>
