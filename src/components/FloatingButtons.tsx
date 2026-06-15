@@ -8,7 +8,7 @@ const FloatingButtons = () => {
   return (
     <div className="fixed bottom-6 right-6 z-50">
       <Button
-        className="w-[60px] h-[60px] rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.23)] hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center p-0 animate-fade-in-up"
+        className="w-[60px] h-[60px] rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.23)] hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center p-0 animate-fade-in-up [&_svg]:size-9"
         aria-label="Falar no WhatsApp"
         asChild
       >
