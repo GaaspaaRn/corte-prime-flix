@@ -3,16 +3,6 @@ import { MapPin, Star, Users } from "lucide-react";
 import * as pixel from "@/lib/pixel";
 
 const Hero = () => {
-  const handleScheduleClick = () => {
-    // Track Pixel Event
-    pixel.event('Contact', {
-      content_name: 'Agendamento via Hero',
-      content_category: 'Conversão'
-    });
-    
-    window.open(`https://wa.me/5547988984877?text=${encodeURIComponent('Olá! Gostaria de agendar um horário na Barbearia Premium.')}`, '_blank');
-  };
-
   return (
     <section id="home" className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -61,9 +51,27 @@ const Hero = () => {
           <Button
             size="lg"
             className="bg-gradient-gold text-primary-foreground font-bold text-[15px] uppercase tracking-[0.05em] px-10 py-6 h-auto rounded-full hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 shadow-none hover:shadow-glow"
-            onClick={handleScheduleClick}
+            asChild
           >
-            Agendar Agora
+            <a
+              href={`https://wa.me/5547988984877?text=${encodeURIComponent('Olá! Gostaria de agendar um horário na Barbearia Premium.')}&utm_source=site&utm_medium=button&utm_campaign=hero&utm_content=agendar_hero`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                // Track Pixel Event
+                pixel.event('Contact', {
+                  content_name: 'Agendamento via Hero',
+                  content_category: 'Conversão'
+                });
+                
+                // Track Google Analytics Event
+                if (typeof (window as any).gtag !== 'undefined') {
+                  (window as any).gtag('event', 'click_whatsapp', { location: 'hero' });
+                }
+              }}
+            >
+              Agendar Agora
+            </a>
           </Button>
           <Button
             variant="outline"

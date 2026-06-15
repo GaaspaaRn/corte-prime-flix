@@ -8,10 +8,6 @@ const AssinaturaCTAFinal = () => {
     });
   };
 
-  const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5547988984877?text=Olá! Quero garantir minha vaga no clube premium da Barbearia Premium!', '_blank');
-  };
-
   return (
     <section className="py-32 px-6 bg-background relative overflow-hidden">
       {/* Subtle bg */}
@@ -67,12 +63,23 @@ const AssinaturaCTAFinal = () => {
             </Button>
 
             <Button
-              onClick={handleWhatsAppClick}
               variant="outline"
               size="lg"
               className="border-border text-foreground hover:border-primary hover:text-primary font-bold text-[15px] uppercase tracking-[0.05em] px-8 py-7 h-auto rounded-full transition-all duration-300 bg-transparent hover:bg-transparent"
+              asChild
             >
-              WhatsApp <ArrowRight className="ml-2 h-4 w-4" />
+              <a
+                href={`https://wa.me/5547988984877?text=${encodeURIComponent('Olá! Quero garantir minha vaga no clube premium da Barbearia Premium!')}&utm_source=site&utm_medium=button&utm_campaign=assinatura_cta_final&utm_content=agendar_final`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  if (typeof (window as any).gtag !== 'undefined') {
+                    (window as any).gtag('event', 'click_whatsapp', { location: 'assinatura_cta_final' });
+                  }
+                }}
+              >
+                WhatsApp <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
             </Button>
           </div>
         </div>

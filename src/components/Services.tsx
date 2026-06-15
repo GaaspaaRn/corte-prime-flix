@@ -102,9 +102,23 @@ const Services = () => {
                 <Button
                   className={`w-full ${service.featured ? 'shadow-glow' : ''}`}
                   variant={service.featured ? 'default' : 'outline'}
-                  onClick={() => window.open(`https://wa.me/5547988984877?text=${encodeURIComponent(`Olá! Gostaria de agendar o serviço de ${service.title}.`)}`, '_blank')}
+                  asChild
                 >
-                  Agendar Serviço
+                  <a
+                    href={`https://wa.me/5547988984877?text=${encodeURIComponent(`Olá! Gostaria de agendar o serviço de ${service.title}.`)}&utm_source=site&utm_medium=button&utm_campaign=services&utm_content=${encodeURIComponent(service.title.toLowerCase().replace(/\s+/g, '_'))}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => {
+                      if (typeof (window as any).gtag !== 'undefined') {
+                        (window as any).gtag('event', 'click_whatsapp', {
+                          location: 'services',
+                          service_name: service.title
+                        });
+                      }
+                    }}
+                  >
+                    Agendar Serviço
+                  </a>
                 </Button>
               </CardContent>
             </Card>

@@ -115,17 +115,39 @@ const About = () => {
               <Button
                 size="lg"
                 className="bg-gradient-gold text-primary-foreground font-bold text-sm uppercase tracking-[0.05em] px-8 py-5 h-auto rounded-full hover:scale-[1.03] transition-all duration-300"
-                onClick={() => window.open(`https://wa.me/5547988984877?text=${encodeURIComponent('Olá! Gostaria de agendar uma visita à Barbearia Premium.')}`, '_blank')}
+                asChild
               >
-                Agendar Visita
+                <a
+                  href={`https://wa.me/5547988984877?text=${encodeURIComponent('Olá! Gostaria de agendar uma visita à Barbearia Premium.')}&utm_source=site&utm_medium=button&utm_campaign=about&utm_content=agendar_sobre`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    if (typeof (window as any).gtag !== 'undefined') {
+                      (window as any).gtag('event', 'click_whatsapp', { location: 'about' });
+                    }
+                  }}
+                >
+                  Agendar Visita
+                </a>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 className="border-border text-foreground hover:border-primary hover:text-primary font-bold text-sm uppercase tracking-[0.05em] px-8 py-5 h-auto rounded-full transition-all duration-300 bg-transparent hover:bg-transparent"
-                onClick={() => window.open('https://maps.app.goo.gl/JpT9MR6PvDcPCzJa7', '_blank')}
+                asChild
               >
-                Ver Localização
+                <a
+                  href="https://maps.app.goo.gl/JpT9MR6PvDcPCzJa7?utm_source=site&utm_medium=button&utm_campaign=maps&utm_content=ver_localizacao"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    if (typeof (window as any).gtag !== 'undefined') {
+                      (window as any).gtag('event', 'click_maps', { location: 'about' });
+                    }
+                  }}
+                >
+                  Ver Localização
+                </a>
               </Button>
             </div>
           </div>

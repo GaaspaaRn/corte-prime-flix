@@ -259,10 +259,24 @@ const Gallery = () => {
                   <Button
                     size="lg"
                     className="w-full bg-gradient-gold text-primary-foreground font-bold text-sm uppercase tracking-[0.05em] py-6 h-auto rounded-full hover:scale-[1.01] transition-all duration-300"
-                    onClick={() => window.open(`https://wa.me/5547988984877?text=${encodeURIComponent(`Olá! Gostaria de agendar o serviço de ${selectedService.title}.`)}`, '_blank')}
+                    asChild
                   >
-                    <Calendar className="w-4 h-4 mr-2" />
-                    Agendar
+                    <a
+                      href={`https://wa.me/5547988984877?text=${encodeURIComponent(`Olá! Gostaria de agendar o serviço de ${selectedService.title}.`)}&utm_source=site&utm_medium=button&utm_campaign=gallery_modal&utm_content=${encodeURIComponent(selectedService.title.toLowerCase().replace(/\s+/g, '_'))}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => {
+                        if (typeof (window as any).gtag !== 'undefined') {
+                          (window as any).gtag('event', 'click_whatsapp', {
+                            location: 'gallery_modal',
+                            service_name: selectedService.title
+                          });
+                        }
+                      }}
+                    >
+                      <Calendar className="w-4 h-4 mr-2" />
+                      Agendar
+                    </a>
                   </Button>
                 </div>
               </>

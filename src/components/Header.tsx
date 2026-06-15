@@ -37,12 +37,22 @@ const Header = () => {
             <a href="/assinatura" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300">Assinatura</a>
           </nav>
 
-          {/* Desktop CTA */}
           <Button 
             className="hidden md:flex bg-gradient-gold text-primary-foreground font-bold text-xs uppercase tracking-[0.05em] px-6 py-2 h-auto rounded-full hover:scale-[1.03] active:scale-[0.98] transition-all duration-300" 
-            onClick={() => window.open(`https://wa.me/5547988984877?text=${encodeURIComponent('Olá! Gostaria de agendar um horário na Barbearia Premium.')}`, '_blank')}
+            asChild
           >
-            Agendar Horário
+            <a
+              href={`https://wa.me/5547988984877?text=${encodeURIComponent('Olá! Gostaria de agendar um horário na Barbearia Premium.')}&utm_source=site&utm_medium=button&utm_campaign=header&utm_content=agendar_topo`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                if (typeof (window as any).gtag !== 'undefined') {
+                  (window as any).gtag('event', 'click_whatsapp', { location: 'header' });
+                }
+              }}
+            >
+              Agendar Horário
+            </a>
           </Button>
 
           {/* Mobile Menu */}
@@ -66,12 +76,21 @@ const Header = () => {
                 <div className="pt-6 border-t border-border">
                   <Button 
                     className="w-full bg-gradient-gold text-primary-foreground font-bold text-sm uppercase tracking-[0.05em] py-5 h-auto rounded-full" 
-                    onClick={() => {
-                      window.open(`https://wa.me/5547988984877?text=${encodeURIComponent('Olá! Gostaria de agendar um horário na Barbearia Premium.')}`, '_blank');
-                      setIsOpen(false);
-                    }}
+                    asChild
                   >
-                    Agendar Horário
+                    <a
+                      href={`https://wa.me/5547988984877?text=${encodeURIComponent('Olá! Gostaria de agendar um horário na Barbearia Premium.')}&utm_source=site&utm_medium=button&utm_campaign=header&utm_content=agendar_topo`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => {
+                        if (typeof (window as any).gtag !== 'undefined') {
+                          (window as any).gtag('event', 'click_whatsapp', { location: 'header' });
+                        }
+                        setIsOpen(false);
+                      }}
+                    >
+                      Agendar Horário
+                    </a>
                   </Button>
                 </div>
                 <div className="pt-4 space-y-3 text-sm text-muted-foreground">

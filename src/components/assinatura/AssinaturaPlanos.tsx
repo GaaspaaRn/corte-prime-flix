@@ -57,22 +57,13 @@ const AssinaturaPlanos = () => {
     }
   ];
 
-  const handlePlanoClick = (planoId: string) => {
-    const plano = planos.find(p => p.id === planoId);
+  const getPlanoWhatsAppUrl = (planoId: string) => {
     let message = 'Olá! Gostaria de assinar o ';
     if (planoId === 'completo') message += 'Plano Premium Cabelo e Barba (R$149,90)';
     if (planoId === 'cabelo') message += 'Plano Premium Cabelo (R$89,90)';
     if (planoId === 'barba') message += 'Plano Premium Barba (R$79,90)';
-
-    // Track Pixel Event
-    pixel.event('Lead', {
-      content_name: plano?.name,
-      content_category: 'Assinatura',
-      value: plano?.numericPrice,
-      currency: 'BRL'
-    });
-
-    window.open(`https://wa.me/5547988984877?text=${encodeURIComponent(message)}`, '_blank');
+    
+    return `https://wa.me/5547988984877?text=${encodeURIComponent(message)}&utm_source=site&utm_medium=button&utm_campaign=assinatura_planos&utm_content=plano_${planoId}`;
   };
 
   return (
@@ -141,14 +132,38 @@ const AssinaturaPlanos = () => {
 
                   {/* CTA Button */}
                   <Button
-                    onClick={() => handlePlanoClick(plano.id)}
                     className={`w-full font-bold text-sm uppercase tracking-[0.05em] py-6 h-auto rounded-full transition-all duration-300 ${isPopular
                       ? 'bg-gradient-gold text-primary-foreground hover:scale-[1.02] active:scale-[0.98] hover:shadow-glow'
                       : 'bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:text-primary'
                       }`}
                     variant={isPopular ? 'default' : 'secondary'}
+                    asChild
                   >
-                    {plano.ctaText}
+                    <a
+                      href={getPlanoWhatsAppUrl(plano.id)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => {
+                        // Track Pixel Event
+                        pixel.event('Lead', {
+                          content_name: plano.name,
+                          content_category: 'Assinatura',
+                          value: plano.numericPrice,
+                          currency: 'BRL'
+                        });
+
+                        // Track Google Analytics Event
+                        if (typeof (window as any).gtag !== 'undefined') {
+                          (window as any).gtag('event', 'click_whatsapp', {
+                            location: 'assinatura_planos',
+                            plan_id: plano.id,
+                            plan_name: plano.name
+                          });
+                        }
+                      }}
+                    >
+                      {plano.ctaText}
+                    </a>
                   </Button>
                 </div>
               </div>

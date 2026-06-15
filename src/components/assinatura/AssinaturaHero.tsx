@@ -9,16 +9,6 @@ const AssinaturaHero = () => {
     });
   };
 
-  const handleWhatsAppClick = () => {
-    // Track Pixel Event
-    pixel.event('Contact', {
-      content_name: 'Dúvida Assinatura Hero',
-      content_category: 'Assinatura'
-    });
-
-    window.open('https://wa.me/5547988984877?text=Olá! Gostaria de saber mais sobre a assinatura premium!', '_blank');
-  };
-
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
       {/* Background Image — slightly visible */}
@@ -69,12 +59,30 @@ const AssinaturaHero = () => {
           </Button>
 
           <Button
-            onClick={handleWhatsAppClick}
             variant="outline"
             size="lg"
             className="w-full sm:w-auto border-border text-foreground hover:border-primary hover:text-primary font-bold text-[15px] uppercase tracking-[0.05em] px-10 py-6 h-auto rounded-full transition-all duration-300 bg-transparent hover:bg-transparent"
+            asChild
           >
-            Chamar no WhatsApp
+            <a
+              href={`https://wa.me/5547988984877?text=${encodeURIComponent('Olá! Gostaria de saber mais sobre a assinatura premium!')}&utm_source=site&utm_medium=button&utm_campaign=assinatura_hero&utm_content=duvida_hero`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                // Track Pixel Event
+                pixel.event('Contact', {
+                  content_name: 'Dúvida Assinatura Hero',
+                  content_category: 'Assinatura'
+                });
+
+                // Track Google Analytics Event
+                if (typeof (window as any).gtag !== 'undefined') {
+                  (window as any).gtag('event', 'click_whatsapp', { location: 'assinatura_hero' });
+                }
+              }}
+            >
+              Chamar no WhatsApp
+            </a>
           </Button>
         </div>
 
