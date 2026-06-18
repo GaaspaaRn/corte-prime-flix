@@ -18,7 +18,7 @@ const HomeFAQ = () => {
     },
     {
       question: "Preciso agendar horário para cortar cabelo em Joinville?",
-      answer: "Sim, recomendamos o agendamento prévio para garantir seu atendimento sem espera. Você pode agendar facilmente pelo nosso WhatsApp: (47) 98898-4877. Basta enviar uma mensagem e escolher o melhor horário."
+      answer: "Não é obrigatório, mas para evitar filas recomendamos o agendamento para garantir seu atendimento sem espera. Você pode agendar facilmente pelo nosso WhatsApp: (47) 98898-4877. Basta enviar uma mensagem e escolher o melhor horário."
     },
     {
       question: "Quais serviços de barbearia vocês oferecem?",
@@ -38,7 +38,7 @@ const HomeFAQ = () => {
     },
     {
       question: "Por que a Barbearia Premium é considerada a melhor de Joinville?",
-      answer: "Com mais de 5 anos de experiência, nota 5.0 no Google com mais de 33 avaliações, e mais de 100 assinantes ativos, somos referência em cortes masculinos em Joinville. Oferecemos um ambiente premium, profissionais qualificados, café expresso cortesia em todas as visitas, e utilizamos apenas produtos de primeira linha."
+      answer: "Com mais de 5 anos de experiência, nota 5.0 no Google, e mais de 130 assinantes ativos, somos referência em cortes masculinos em Joinville. Oferecemos um ambiente premium, profissionais qualificados, café expresso cortesia em todas as visitas, e utilizamos apenas produtos de primeira linha."
     }
   ];
 
