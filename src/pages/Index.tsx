@@ -2,12 +2,13 @@ import { lazy, Suspense, useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import SEOHelmet from "@/components/SEOHelmet";
+import Gallery from "@/components/Gallery";
+import About from "@/components/About";
+import AssinaturaProvaSocial from "@/components/assinatura/AssinaturaProvaSocial";
+import HomeFAQ from "@/components/HomeFAQ";
+import Footer from "@/components/Footer";
 
-// Lazy load components below the fold for better performance
-const Gallery = lazy(() => import("@/components/Gallery"));
-const About = lazy(() => import("@/components/About"));
-const AssinaturaProvaSocial = lazy(() => import("@/components/assinatura/AssinaturaProvaSocial"));
-const Footer = lazy(() => import("@/components/Footer"));
+// Only lazy-load non-SEO components
 const FloatingButtons = lazy(() => import("@/components/FloatingButtons"));
 
 const Index = () => {
@@ -25,7 +26,6 @@ const Index = () => {
       { threshold: 0.1 }
     );
 
-    // Small delay to ensure lazy-loaded components are rendered
     const timer = setTimeout(() => {
       document.querySelectorAll(".reveal, .animate-on-scroll").forEach((el) => {
         observer.observe(el);
@@ -43,11 +43,12 @@ const Index = () => {
       <SEOHelmet />
       <Header />
       <Hero />
-      <Suspense fallback={<div className="h-20 bg-card/50 animate-pulse" />}>
-        <Gallery />
-        <About />
-        <AssinaturaProvaSocial />
-        <Footer />
+      <Gallery />
+      <About />
+      <AssinaturaProvaSocial />
+      <HomeFAQ />
+      <Footer />
+      <Suspense fallback={null}>
         <FloatingButtons />
       </Suspense>
     </div>

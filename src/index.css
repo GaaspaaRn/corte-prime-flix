@@ -90,24 +90,18 @@
 /* ──────────────────────────────────────────────────
    REVEAL ANIMATION SYSTEM
    Premium scroll-triggered animations
+   Elements are VISIBLE by default for crawlers/SEO.
+   Animations only activate when JS loads (.js-loaded).
    ────────────────────────────────────────────────── */
 
-.reveal {
-  opacity: 0;
-  transform: translateY(32px);
-  transition: 
-    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Legacy support */
+.reveal,
 .animate-on-scroll {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html.js-loaded .reveal,
+html.js-loaded .animate-on-scroll {
   opacity: 0;
   transform: translateY(32px);
   transition: 
@@ -116,9 +110,20 @@
   will-change: opacity, transform;
 }
 
-.animate-on-scroll.visible {
+html.js-loaded .reveal.visible,
+html.js-loaded .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html.js-loaded .reveal,
+  html.js-loaded .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Staggered delays */
