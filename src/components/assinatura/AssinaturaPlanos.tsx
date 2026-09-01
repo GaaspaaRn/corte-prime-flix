@@ -8,8 +8,8 @@ const AssinaturaPlanos = () => {
       id: 'barba',
       name: 'Plano Barba',
       subtitle: 'BARBA ILIMITADA',
-      price: '79,90',
-      numericPrice: 79.90,
+      price: '94,90',
+      numericPrice: 94.90,
       popular: false,
       features: [
         'Barba completa ilimitada',
@@ -25,8 +25,8 @@ const AssinaturaPlanos = () => {
       id: 'completo',
       name: 'Plano Cabelo e Barba',
       subtitle: 'CABELO + BARBA ILIMITADO',
-      price: '149,90',
-      numericPrice: 149.90,
+      price: '164,90',
+      numericPrice: 164.90,
       popular: true,
       features: [
         'Cabelo + Barba ilimitados',
@@ -42,8 +42,8 @@ const AssinaturaPlanos = () => {
       id: 'cabelo',
       name: 'Plano Cabelo',
       subtitle: 'CABELO ILIMITADO',
-      price: '89,90',
-      numericPrice: 89.90,
+      price: '104,90',
+      numericPrice: 104.90,
       popular: false,
       features: [
         'Corte masculino ilimitado',
@@ -59,9 +59,9 @@ const AssinaturaPlanos = () => {
 
   const getPlanoWhatsAppUrl = (planoId: string) => {
     let message = 'Olá! Gostaria de assinar o ';
-    if (planoId === 'completo') message += 'Plano Premium Cabelo e Barba (R$149,90)';
-    if (planoId === 'cabelo') message += 'Plano Premium Cabelo (R$89,90)';
-    if (planoId === 'barba') message += 'Plano Premium Barba (R$79,90)';
+    if (planoId === 'completo') message += 'Plano Premium Cabelo e Barba (R$164,90)';
+    if (planoId === 'cabelo') message += 'Plano Premium Cabelo (R$104,90)';
+    if (planoId === 'barba') message += 'Plano Premium Barba (R$94,90)';
     
     return `https://wa.me/5547988984877?text=${encodeURIComponent(message)}&utm_source=site&utm_medium=button&utm_campaign=assinatura_planos&utm_content=plano_${planoId}`;
   };

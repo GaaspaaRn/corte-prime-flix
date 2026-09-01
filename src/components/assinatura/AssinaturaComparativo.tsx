@@ -38,17 +38,17 @@ const AssinaturaComparativo = () => {
               <div className="flex justify-between items-end border-b border-border pb-4">
                 <div>
                   <p className="text-foreground font-medium">Corte de Cabelo (4x)</p>
-                  <p className="text-sm text-muted-foreground">4 × R$ 40,00</p>
+                  <p className="text-sm text-muted-foreground">4 × R$ 45,00</p>
                 </div>
-                <p className="text-lg font-bold text-foreground/60">R$ 160</p>
+                <p className="text-lg font-bold text-foreground/60">R$ 180</p>
               </div>
 
               <div className="flex justify-between items-end border-b border-border pb-4">
                 <div>
                   <p className="text-foreground font-medium">Barba (4x)</p>
-                  <p className="text-sm text-muted-foreground">4 × R$ 35,00</p>
+                  <p className="text-sm text-muted-foreground">4 × R$ 40,00</p>
                 </div>
-                <p className="text-lg font-bold text-foreground/60">R$ 140</p>
+                <p className="text-lg font-bold text-foreground/60">R$ 160</p>
               </div>
 
               <div className="flex justify-between items-end pb-4 opacity-40">
@@ -64,7 +64,7 @@ const AssinaturaComparativo = () => {
               <p className="text-xs text-destructive font-bold uppercase tracking-[0.15em] mb-1">Gasto mensal</p>
               <div className="flex items-baseline gap-1">
                 <span className="text-lg text-foreground/60 font-bold">R$</span>
-                <span className="text-4xl font-black text-foreground/60">300</span>
+                <span className="text-4xl font-black text-foreground/60">340</span>
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@ const AssinaturaComparativo = () => {
               <p className="text-xs text-primary font-bold uppercase tracking-[0.15em] mb-1">Pagamento único mensal</p>
               <div className="flex items-baseline gap-1">
                 <span className="text-lg text-primary font-bold">R$</span>
-                <span className="text-4xl font-black text-primary">149,90</span>
+                <span className="text-4xl font-black text-primary">164,90</span>
               </div>
             </div>
           </div>
@@ -122,7 +122,7 @@ const AssinaturaComparativo = () => {
           {/* Mobile Layout (No Borders/Bg) */}
           <div className="sm:hidden flex flex-col items-center gap-5 w-full px-2">
             <p className="text-lg font-bold text-center text-foreground">
-              Você economiza mais de <br /><span className="text-primary font-black">R$ 150/mês</span>
+              Você economiza mais de <br /><span className="text-primary font-black">R$ 175/mês</span>
             </p>
             <Button
               onClick={handleCTAClick}
@@ -136,7 +136,7 @@ const AssinaturaComparativo = () => {
           <div className="hidden sm:inline-block gradient-border-wrap rounded-full">
             <div className="bg-background rounded-full px-8 py-4 flex flex-row items-center gap-6">
               <p className="text-lg md:text-xl font-bold text-center">
-                Você economiza mais de <span className="text-primary font-black">R$ 150/mês</span>
+                Você economiza mais de <span className="text-primary font-black">R$ 175/mês</span>
               </p>
               <Button
                 onClick={handleCTAClick}

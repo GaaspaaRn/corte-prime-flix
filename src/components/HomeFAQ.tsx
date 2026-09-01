@@ -22,15 +22,15 @@ const HomeFAQ = () => {
     },
     {
       question: "Quais serviços de barbearia vocês oferecem?",
-      answer: "Oferecemos uma variedade completa de serviços masculinos: Corte de cabelo (R$ 40), Barba completa com toalha quente (R$ 35), Combo Cabelo + Barba (R$ 70), Barba na máquina (R$ 25), Sobrancelha, Hidratação capilar e Selagem capilar. Todos com produtos premium e profissionais com mais de 5 anos de experiência."
+      answer: "Oferecemos uma variedade completa de serviços masculinos: Corte de cabelo (R$ 45), Barba completa com toalha quente (R$ 40), Combo Cabelo + Barba (R$ 80), Barba na máquina (R$ 25), Sobrancelha, Hidratação capilar e Selagem capilar. Todos com produtos premium e profissionais com mais de 5 anos de experiência."
     },
     {
       question: "Quanto custa um corte de cabelo masculino em Joinville?",
-      answer: "Na Barbearia Premium Joinville, o corte de cabelo masculino custa R$ 40,00 e inclui lavagem, corte personalizado (degradê, fade, undercut ou clássico) e finalização com produtos de alta qualidade. Nosso combo Cabelo + Barba sai por R$ 70,00 — o melhor custo-benefício da região."
+      answer: "Na Barbearia Premium Joinville, o corte de cabelo masculino custa R$ 45,00 e inclui lavagem, corte personalizado (degradê, fade, undercut ou clássico) e finalização com produtos de alta qualidade. Nosso combo Cabelo + Barba sai por R$ 80,00 — o melhor custo-benefício da região."
     },
     {
       question: "Como funciona o clube de assinatura da barbearia?",
-      answer: "Nosso clube de assinatura oferece cortes e/ou barbas ilimitados durante o mês. Temos três planos: Premium Barba (R$ 79,90/mês), Premium Cabelo (R$ 89,90/mês) e Premium Completo Cabelo + Barba (R$ 149,90/mês). Sem fidelidade e sem multa de cancelamento — funciona como um Netflix de barbearia."
+      answer: "Nosso clube de assinatura oferece cortes e/ou barbas ilimitados durante o mês. Temos três planos: Premium Barba (R$ 94,90/mês), Premium Cabelo (R$ 104,90/mês) e Premium Completo Cabelo + Barba (R$ 164,90/mês). Sem fidelidade e sem multa de cancelamento — funciona como um Netflix de barbearia."
     },
     {
       question: "Quais formas de pagamento a barbearia aceita?",

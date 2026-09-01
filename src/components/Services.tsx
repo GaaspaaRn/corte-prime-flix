@@ -8,7 +8,7 @@ const Services = () => {
       icon: Scissors,
       title: "Corte",
       description: "Cortes tradicionais ou modernos (fade, undercut) com acabamento impecável",
-      price: "R$ 40",
+      price: "R$ 45",
       duration: "30 min",
       features: ["Lavagem", "Corte personalizado", "Finalização", "Styling"]
     },
@@ -16,7 +16,7 @@ const Services = () => {
       icon: Crown,
       title: "Cabelo e Barba",
       description: "Experiência completa combinando corte personalizado e barba completa",
-      price: "R$ 70",
+      price: "R$ 80",
       duration: "60 min",
       features: ["Corte de cabelo", "Barba completa", "Toalha quente", "Massagem facial", "Finalização premium"],
       featured: true
@@ -25,7 +25,7 @@ const Services = () => {
       icon: Brush,
       title: "Barba",
       description: "Modelagem, aparar e finalizar sua barba com toalha quente e balm premium",
-      price: "R$ 35",
+      price: "R$ 40",
       duration: "30 min",
       features: ["Limpeza facial", "Aparar e modelar", "Toalha quente", "Hidratação pós-barba"]
     },

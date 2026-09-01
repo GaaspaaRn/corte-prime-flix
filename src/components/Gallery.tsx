@@ -44,7 +44,7 @@ const Gallery = () => {
       {
         id: 1, type: "image", title: "Corte Clássico",
         description: "Fade baixo com degradê profissional",
-        price: "R$ 40", duration: "30 min", match: "99%",
+        price: "R$ 45", duration: "30 min", match: "99%",
         image: "/images/gallery/cortes/corte-classico.webp",
         details: "Corte tradicional com técnicas modernas, ideal para o dia a dia profissional. Inclui lavagem, corte personalizado e finalização com produtos premium de alta qualidade.",
         features: ["Lavagem premium", "Corte personalizado", "Finalização", "Styling"]
@@ -52,7 +52,7 @@ const Gallery = () => {
       {
         id: 2, type: "image", title: "Corte Moderno",
         description: "Undercut estilizado e atual",
-        price: "R$ 40", duration: "30 min", match: "97%",
+        price: "R$ 45", duration: "30 min", match: "97%",
         image: "/images/gallery/cortes/corte-moderno.webp",
         details: "Corte moderno com técnicas atuais (degradê, fade, undercut), perfeito para quem busca um visual diferenciado, estiloso e de fácil manutenção.",
         features: ["Consulta de estilo", "Lavagem premium", "Corte moderno", "Finalização especial"]
@@ -60,7 +60,7 @@ const Gallery = () => {
       {
         id: 3, type: "image", title: "Cabelo e Barba",
         description: "Experiência completa premium",
-        price: "R$ 70", duration: "60 min", match: "98%",
+        price: "R$ 80", duration: "60 min", match: "98%",
         image: "/images/gallery/cortes/corte-vip.webp",
         details: "Experiência exclusiva combinando corte de cabelo personalizado e barba completa com toalha quente e massagem. Barbearia Premium Joinville - Comasa.",
         features: ["Atendimento VIP", "Cerveja gelada ou café cortesia", "Produtos de alta qualidade", "Corte + Barba completa", "Massagem e toalha quente"]
@@ -70,7 +70,7 @@ const Gallery = () => {
       {
         id: 7, type: "image", title: "Barba",
         description: "Modelagem e aparar profissional",
-        price: "R$ 35", duration: "30 min", match: "98%",
+        price: "R$ 40", duration: "30 min", match: "98%",
         image: "/images/gallery/barbas/barba-completa.webp",
         details: "Serviço completo de barba com toalha quente, modelagem personalizada, alinhamento de fios e hidratação com óleos premium.",
         features: ["Limpeza de pele facial", "Modelagem e desenho", "Aparar na tesoura/máquina", "Hidratação pós-barba"]

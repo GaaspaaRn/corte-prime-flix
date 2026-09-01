@@ -45,7 +45,7 @@ const AssinaturaHero = () => {
 
         {/* Price Anchor */}
         <p className="reveal delay-2 text-muted-foreground mb-10 text-base">
-          Planos a partir de <strong className="text-foreground text-xl font-bold">R$ 79,90</strong>/mês
+          Planos a partir de <strong className="text-foreground text-xl font-bold">R$ 94,90</strong>/mês
         </p>
 
         {/* CTA Buttons */}
